@@ -1,3 +1,7 @@
 function onload(){
 
 }
+
+function check(){
+  
+}
