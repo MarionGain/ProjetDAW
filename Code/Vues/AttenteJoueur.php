@@ -10,7 +10,7 @@
         require_once('header.php');
       ?>
     </header>
-    <nav>
+    <nav id="tableau">
       <?php
         require_once('checkTableau.php');
       ?>
