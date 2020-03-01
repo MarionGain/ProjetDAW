@@ -15,6 +15,11 @@
         require_once('checkTableau.php');
       ?>
     </nav>
+    <nav id="chat">
+      <?php
+      require_once('chat.php');
+      ?>
+    </nav>
     <<footer>
       <?php
         require_once('footer.php');
