@@ -1,7 +1,0 @@
-function onload(){
-
-}
-
-function check(){
-  
-}
