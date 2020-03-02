@@ -1,0 +1,22 @@
+#imageGH {
+    width:300px;
+    margin-right: auto ;
+    border:10px solid black;
+}
+
+#imageDB{
+    width:300px;
+    border:10px solid blue;
+    float : right
+}
+
+#titre{
+    color:red ;
+    text-align: center;
+    font-size: 60px;
+}
+
+#texte{
+    text-align: center;  
+    font-size: 20px; 
+}
