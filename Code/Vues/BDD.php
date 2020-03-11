@@ -2,13 +2,19 @@
 
 function OpenCon()
 {
-  $dbhost = "";
-  $dbuser = "";
-  $dbpass = "";
-  $dbname = "";
+  $host = "localhost";
+  $login = "root";
+  $password = "";
+  $database = "principal";
 
 //à changer pour adapter au type de BD
- $conn = new mysqli($dbhost, $dbuser, $dbpass,$dbname) or die("Connect failed: %s\n". $conn -> error);
+try {
+  $conn = new PDO('mysql:host='.$host.';dbname='.$database, $login, $password);
+  //Q1 $dbh->query("INSERT INTO GROUPE VALUES(\"TP1\"),(\"TP2\"),(\"TP3\"),(\"TP4\")");
+} catch (PDOException $e){
+  print "ALED !!!!!!!! : ".$e->getMessage()."<br />";
+  die();
+}
   return $conn;
 }
 
