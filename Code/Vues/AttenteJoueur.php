@@ -4,26 +4,25 @@
     <meta charset="utf-8">
     <title>En attente</title>
   </head>
-  <body>
+  <body onload="onload()">
     <header>
       <?php
-        require_once('header.php');
+        //require_once('header.php');
       ?>
     </header>
     <nav id="tableau">
-      <?php
-        require_once('checkTableau.php');
-      ?>
     </nav>
     <nav id="chat">
       <?php
-      require_once('chat.php');
+    //  require_once('chat.php');
       ?>
     </nav>
-    <<footer>
+    <footer>
       <?php
-        require_once('footer.php');
+      //  require_once('footer.php');
       ?>
     </footer>
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script  type="text/javascript" src="AttenteJoueur.js"></script>
 </html>
