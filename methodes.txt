@@ -1,0 +1,79 @@
+Quelques idées de méthodes pour les ressources (à mettre dans la classe de la ressource correspondante)
+
+Pompier : 
+
+-> Méthode "Aller récupérer des victimes" 
+	-> Action : le pompier se rend sur les lieux de l'accident (déplacement de l'icône sur la map) -> pause de quelques secondes -> déplacement de 					l'icône du pompier et d'une victime devant le PMA. 
+
+-> Méthode "Aller évacuer une victime" 
+
+	-> Action : le pompier prend une ambulance dans la liste des ressources et emmène une victime définie (paramètre) à un hôpital défini (autre paramètre) -> met à jour le tableau du centre de contrôle et du médecin répartiteur -> cette action ne peut avoir lieue que si une ambulance est disponible dans la zone de répartition (sortie du PMA) et elle ne peut être demandée que par le médecin répartiteur. 
+
+
+Policier : 
+
+-> Méthode "Aller surveiller la morgue"
+	-> Action : l'icône du policier se déplace à la morgue 
+-> Méthode "Aller réguler la circulation"
+	-> Action : le joueur choisit l'axe routier où placer le policier et l'icône du policier apparaît sur l'axe après quelques secondes. 
+-> Méthode "Aller identifier les victimes"
+	-> Action : après quelques secondes, l'icône du policier apparaît devant le PMA au niveau de la zone de triage. 
+
+
+PMA :
+
+-> Méthode "placer le PMA sur la map"
+	-> Action : le joueur fait un glisser-déposer de l'icône du PMA à l'endroit voulu sur la map 
+
+
+Victimes : 
+
+-> Attribut "état" : type énuméré au choix parmi "Grave", "Léger", "Psychologique", "Mort". 
+-> Attribut "en train d'être soigné" : booléen qui indique si un médecin est auprès du patient ou non. 
+
+-> Méthode "Guérir"
+	-> Action : si un médecin est auprès du patient, un chrono s'enclenche, au bout d'un certain temps l'état de la victime s'améliore si le médecin est resté tout le temps nécessaire auprès de lui.
+
+-> Méthode "Dégradation de l'état" 
+	-> Action : de manière aléatoire, l'état de la victime se dégrade (à voir si c'est juste aléatoire ou si ça dépend de l'absence ou non d'un médecin aurpès de lui).
+
+-> Méthode "setSoigné" -> modifie le booléen lorsqu'un médecin commence ou arrête de s'occuper du patient. 
+ 
+
+Médecin : 
+
+-> Attribut "estAidé" : de type entier qui compte le nombre d'infirmiers qui sont en train d'aider le médecin -> permet de tester la présence d'un nombre particulier d'infirmiers pour calculer le taux de guérison des patients en fonction du temps. 
+ 
+-> Méthode "Aller soigner les victimes"
+	-> Action : le joueur a le choix entre 2 états (blessés graves ou légers) possibles pour les patients que le médecin ira soigner. Après quelques secondes l'icône du médecin apparaît dans la zone correspondante du PMA. -> cette méthode déclenche l'appel de la méthode "guérir" d'une des victimes de la zone correspondante (passage du booléen soigné à true). 
+
+
+Infirmier : 
+
+-> Méthode "Aller aider les médecins" 
+	-> Action : prend en paramètre l'état des victimes à aller soigner. 
+
+
+Ambulance : 
+
+-> Attribut "Occupée" -> booléen qui détermine si l'ambulance est en cours d'utilisation ou non (utile lors d'une évacuation par exemple : le booléen passe à true et l'ambulance disparaît de la zone de répartition)
+
+
+
+Camion pompier : 
+
+-> idem ambulance je pense 
+
+
+Voiture police : 
+
+-> idem ?? 
+
+Psychologue : 
+
+-> Méthode "Écouter une victime"
+	-> Action : le psychologue est placé dans la zone prévue à côté du PMA (côté blessés légers) et s'occupe d'une victime. -> au bout d'un certain temps on imagine que la victime est autorisée à rentrer chez elle ou redirigée vers un hôpital ?? 
+
+
+
+
