@@ -2,8 +2,10 @@
 class Victime extends Personnage
 {
 
-$etat= array("Léger"=>0,"Grave"=>1,"Psychologique"=>2,"Mort"=>3);
+$etatsPossible= array("Soigné","Léger","Grave","Psychologique","Mort");
+$etat=$etatsPossible[0];
 $pris_en_charge=false;
+$idVictime=123;
 
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Victime descends de Personnage
@@ -14,12 +16,64 @@ $pris_en_charge=false;
         print "Destruction de " . __CLASS__ . "\n";
     }
 
+  public function Guérir(){
+    if($this->$pris_en_charge == true AND $this->$etat!="Mort"){
+      while($this->$etat != "Soigné"){
+        if($this->$etat=="Grave"){
+          sleep(120);   //"Met en pause" la fonction pendant 120 secondes pour simuler un timer
+          $this->$etat==$etatsPossible[array_search("Léger",$etatsPossible)];
+        }
+        elseif ($this->$etat=="Léger") {
+          sleep(120);   //"Met en pause" la fonction pendant 120 secondes pour simuler un timer
+          $this->$etat==$etatsPossible[array_search("Soigné",$etatsPossible)];
+        }
+      }
+    }
+  }
+
+  public function DégraderEtat(){
+    if($this->$pris_en_charge == false){
+      while($this->$etat != "Mort"){
+        if($this->$etat=="Léger"){
+          sleep(120);   //"Met en pause" la fonction pendant 120 secondes pour simuler un timer
+          $this->$etat==$etatsPossible[array_search("Grave",$etatsPossible)];
+        }
+        elseif ($this->$etat=="Grave") {
+          sleep(120);   //"Met en pause" la fonction pendant 120 secondes pour simuler un timer
+          $this->$etat==$etatsPossible[array_search("Mort",$etatsPossible)];
+        }
+      }
+    }
+  }
+
   public function __set($property, $value) {
-        parent::__set($property,$value); //appel du set de Personnage car Victime descends de Personnage
+    if('PrisEnCharge' == $property){ //si on veux changer le booléen pris en charge
+      $this->$pris_en_charge=$value; //on lui affecte une valeur
+    }
+    elseif ('etat' == $property) {
+      $this->$etat=$etatsPossible[array_search($value,$etatsPossible)];
+    }
+    elseif ('id' == $property) {
+      $this->$idVictime=$value;
+    }
+    else {
+      parent::__set($property,$value); //sinon appel du set de Personnage car Victime descends de Personnage
+    }
     }
 
   public function __get($property) {
-        parent::__get($property); //appel du get de Personnage car Victime descends de Personnage
+    if('PrisEnCharge' == $property){ //si on veux changer le booléen pris en charge
+      return $this->$pris_en_charge; //on lui affecte une valeur
+    }
+    elseif ('etat' == $property) {
+      return $this->$etat;
+    }
+    elseif ('id' == $property) {
+      return $this->$idVictime;
+    }
+    else {
+      parent::__get($property); //appel du get de Personnage car Victime descends de Personnage
+    }
     }
 }
 ?>
