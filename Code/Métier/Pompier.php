@@ -1,4 +1,5 @@
 <?php
+require("Personnage.php");
 class Pompier extends Personnage
 {
   function __construct() {
