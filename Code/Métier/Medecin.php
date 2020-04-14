@@ -1,4 +1,5 @@
 <?php
+require("Personnage.php");
 class Medecin extends Personnage
 {
 

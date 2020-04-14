@@ -1,4 +1,5 @@
 <?php
+require("Ressource.php");
 class Personnage extends Ressource
 {
   function __construct() {
