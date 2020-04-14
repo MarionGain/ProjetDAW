@@ -1,6 +1,10 @@
 <?php
 class Victime extends Personnage
 {
+
+$etat= array("Léger"=>0,"Grave"=>1,"Psychologique"=>2,"Mort"=>3);
+$pris_en_charge=false;
+
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Victime descends de Personnage
         print "Constructeur de victime\n";

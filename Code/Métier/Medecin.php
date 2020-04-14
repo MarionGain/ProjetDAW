@@ -1,6 +1,9 @@
 <?php
 class Medecin extends Personnage
 {
+
+$estAidé=0;
+
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Medecin descends de Personnage
         print "Constructeur de Medecin\n";
@@ -18,4 +21,5 @@ class Medecin extends Personnage
         parent::__get($property); //appel du get de Personnage car Medecin descends de Personnage
     }
 }
+
 ?>

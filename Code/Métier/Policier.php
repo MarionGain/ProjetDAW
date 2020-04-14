@@ -19,4 +19,6 @@ class Policier extends Personnage
     }
 
 }
+
+
 ?>

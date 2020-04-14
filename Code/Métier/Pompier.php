@@ -18,4 +18,5 @@ class Pompier extends Personnage
         parent::__get($property); //appel du get de Personnage car Pompier descends de Personnage
     }
 }
+
 ?>
