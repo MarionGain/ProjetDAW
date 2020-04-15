@@ -21,6 +21,18 @@ $estAidé=0;
   public function __get($property) {
         parent::__get($property); //appel du get de Personnage car Medecin descends de Personnage
     }
+
+  public function SoignerVictimes(){
+    if ($victim->$etat = "Grave" ){
+      //placement sur la carte du médecin vers les victimes grave
+      Guérir();
+       $victim->$etat="Soigné"; 
+    }elseif($victim->$etat = "Léger"){
+      //placement sur la carte du médecin vers les victimes légères
+      Guérir();
+       $victim->$etat="Soigné"; 
+    }
+  }
 }
 
 ?>
