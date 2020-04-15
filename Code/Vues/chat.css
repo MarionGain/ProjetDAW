@@ -1,0 +1,29 @@
+form{
+
+	max-width: 300px;
+	min-width: 100px;
+	height: 50%;
+
+	margin-right: 2%;
+	margin-left: 5%;
+	margin-top : 50%;
+	
+	border : 1px solid black;
+	border-radius: 5px;
+	background-color: white;
+
+	scroll-behavior: smooth;
+	overflow: scroll;
+
+}
+
+textarea{
+
+	width : 90%;
+	height: 20%;
+	margin-top: 100%;
+
+	scroll-behavior: smooth;
+	overflow: scroll;
+}
+

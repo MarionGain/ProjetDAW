@@ -1,0 +1,27 @@
+/*On garde*/
+footer {
+
+    margin: -20px;
+    padding-top : 10px;
+    padding-left: 30px;
+
+    height: 15%;
+    min-height: 100px;
+    background-color: rgb(5,64,87);
+    color: white;
+    font-size: 0.75em;
+
+}
+
+footer a {
+	color : white;
+	text-shadow: 3px 2px 2px black;
+}
+
+footer a:visited {
+    color : rgb(39,119,138);
+}
+
+footer a:hover {
+    color : rgb(194,231,209);
+}
