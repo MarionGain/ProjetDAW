@@ -1,0 +1,58 @@
+html{
+
+  height: 100%;
+}
+
+body{
+
+  font-size : 1.2em;
+  font-family: cursive;
+
+  background-color: grey;
+  background-image: url("Images/fond_ecran.png");
+
+  height: 100%;
+  width: 100%;
+  margin : 0px;
+
+}
+
+section {
+
+  min-height: 500px;
+  max-height: 800px;
+  height: 80%;
+  width : 100%;
+
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /*margin-bottom: 10%;*/
+}
+
+.menu{
+
+  margin-top: 5%;
+}
+
+article {
+
+  margin-top : 3%;
+  /*Modifie la taille de l'article (milieu)*/
+  max-height: 800px;
+  height: 100%;
+  width : 50%;
+  min-width: 400px;
+
+}
+
+aside {
+
+	width: 25%;
+  max-width: 300px;
+  min-width: 100px;
+  float: right;
+}

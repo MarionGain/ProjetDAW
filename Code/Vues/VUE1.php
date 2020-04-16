@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link href="style.css" rel="stylesheet">
-	<link href="tableau.css" rel="stylesheet">
+    <link href="vues.css" rel="stylesheet">
     <meta charset="utf-8">
-    <title></title>
+    <title>Page</title>
   </head>
-  <header>
-    <?php require("header.php"); ?>
-  </header>
+
   <body>
-  <div id=carte>
-  <?php require("menu.php"); $menu=affiche_menu(); echo $menu;
-  require("map.php");
-  echo $map;
-  ?>
+    <div class="page">
+
+    <!-- En-tête -->
+    <header>
+      <?php require("header.php"); ?>
+    </header>
+
+    <div class="menu">
+
+      <?php require("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+    </div>
+
+    <section id="section">
+      <aside>
+        <?php
+          require_once("tableau.php");
+        ?>
+      </aside>
+
+      <article>
+        
+        <?php 
+          require_once("map.php");
+          echo $map;
+        ?>
+      </article>
+
+      <aside>
+        <?php
+          require_once("chat.php");
+          echo $tableau;
+          echo $chat;
+        ?>
+      </aside>
+
+    </section>
+
+    <footer id="footer">
+      <?php require("footer.php"); ?>
+    </footer>
   </div>
-  <nav id=tab>
-	<?php require("tableau.php"); ?>
-  </nav>
   </body>
-  <footer>
-    <?php require("footer.php"); ?>
-  </footer>
 </html>
