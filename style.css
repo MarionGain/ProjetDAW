@@ -1,0 +1,36 @@
+#onglets
+{
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 24px;
+    margin-left : 0;
+}
+
+#onglets li
+{
+    float : left;
+    height : 21px;
+    background-color: lightblue;
+    margin : 2px 2px 0 2px;
+    border : 1px solid #9EA0A1;
+}
+
+#onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: lightcyan;
+    border : 1px solid #9EA0A1;
+}
+
+#onglets a
+{
+    display : block;
+    color : black;
+    text-decoration : none;
+    padding : 4px;
+}
+
+#onglets a:hover
+{
+    background : white;
+}
