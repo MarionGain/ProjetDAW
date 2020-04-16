@@ -1,0 +1,105 @@
+body{
+
+  font-size : 1.2em;
+  font-family: cursive;
+  background-color: grey;
+  background-image: url("/projet/Images/fond_ecran.png");
+}
+
+h1 {
+
+  text-align: center;
+  font-size : 3em;
+}
+
+#imageGauche {
+
+  /*Marges et taille*/
+  width: 100%;
+  margin-bottom: 10px;
+
+  /*Bordures*/
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+#imageDroite{
+
+  /*Marges et taille*/
+  margin-bottom: 20px;
+  width : 100%;
+
+
+  /*Position*/
+  position: relative;
+  float : right;
+
+  /*Bordures*/
+  border: 5px solid black;
+  border-radius: 20px;
+}
+
+#texte{
+
+  text-align: center;
+  font-size: 1em;
+
+  /*Taille et marges*/
+  width: 70%;
+  padding: 15px;
+  margin : auto;
+
+  /*Bordures*/
+  border: 2px dashed black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px black;
+}
+
+aside {
+
+  margin : auto;
+  width: 60%;
+
+}
+
+button{
+
+  /*Texte*/
+  color : rgb(39,119,138);
+  text-align: center;
+  font-size: 1em;
+  font-family: cursive;
+
+  background-color : rgba(39,119,138, 0.5);
+
+  /*Bordures*/
+  border-radius: 50%;
+  box-shadow: 5px 2px 2px grey;
+
+  /*Marges et taille*/
+  margin : auto;
+  width : 100px;
+  height: 100px;
+  margin-top: 5%;
+
+}
+
+button:hover {
+
+  color : rgb(194,231,209);
+  box-shadow: 5px 2px 2px darkgrey;
+
+}
+
+.bouton{
+
+  display: flex;
+  justify-content: center;
+
+}
+
+section {
+
+  display: flex;
+  margin-bottom: 60px;
+}
