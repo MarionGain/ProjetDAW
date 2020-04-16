@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <gendarmerie>
+    <qteGendarme></qteGendarme>
+    <qteVoitureGendarmerie></qteVoitureGendarmerie>
+    <qteRenfortGendarme></qteRenfortGendarme>
+    <qteRenfortVoitureGendarmerie></qteRenfortVoitureGendarmerie>
+  </gendarmerie>
+  <samu>
+    <qteInfirmier></qteInfirmier>
+    <qteMedecin></qteMedecin>
+    <qteAmbulancier></qteAmbulancier>
+    <qteAmbulance></qteAmbulance>
+    <qteRenfortInfirimer></qteRenfortInfirimer>
+    <qteRenfortMedecin></qteRenfortMedecin>
+    <qteRenfortAmbulancier></qteRenfortAmbulancier>
+    <qteRenfortAmbulance></qteRenfortAmbulance>
+  </samu>
+  <pompier>
+    <qtePompier></qtePompier>
+    <qteCamionPompier></qteCamionPompier>
+    <qteRenfortPompier></qteRenfortPompier>
+    <qteRenfortCamion></qteRenfortCamion>
+  </pompier>
+</config>

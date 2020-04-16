@@ -1,0 +1,24 @@
+/*On garde*/
+
+
+header {
+
+  margin: -20px;
+  padding-top: 15px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  height : 100px;
+  background-color: rgb(5,64,87);
+  font-family: cursive;
+}
+
+input{
+
+  font-size: 1em;
+  font-family: cursive;
+  margin-top: 20px;
+  width: 140px;
+  height: 50px;
+  border-radius: 10%;
+  box-shadow: 2px 1px 1px grey;
+}

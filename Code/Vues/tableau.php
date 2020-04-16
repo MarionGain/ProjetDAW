@@ -4,11 +4,10 @@
 	 <?php require("data.php"); ?>
 	 <link href="tableau.css" rel="stylesheet">
 	 <script type="text/script" src="draganddrop.js" ></script>
-    <meta charset="utf-8">
-    <title></title>
+   <meta charset="utf-8">
+   <title></title>
   </head>
   <body>
-
   	<div class="tableau">
 
   		<h1>Renfort</h1>

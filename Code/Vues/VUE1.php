@@ -7,7 +7,6 @@
   </head>
 
   <body>
-
     <div class="page">
 
     <!-- En-tête -->
@@ -48,6 +47,6 @@
     <footer id="footer">
       <?php require("footer.php"); ?>
     </footer>
-</div>
+  </div>
   </body>
 </html>
