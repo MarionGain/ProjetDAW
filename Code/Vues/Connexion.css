@@ -70,7 +70,10 @@ form input {
     box-shadow: 5px 2px 2px darkgrey;
  }
 
-/*.button:nth-child(2){
-  margin-left: -50%;
+
+.MessageErreur{
+    font-size : 12px;
+    font-family:monospace;
+    padding-left: 20px;
+    color: white;
 }
-*/

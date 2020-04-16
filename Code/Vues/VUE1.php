@@ -20,7 +20,7 @@
       <?php require("menu.php"); $menu=affiche_menu(); echo $menu; ?>
     </div>
 
-    <section>
+    <section id="section">
       <aside>
         <?php
           require_once("tableau.php");
@@ -38,13 +38,14 @@
       <aside>
         <?php
           require_once("chat.php");
+          echo $tableau;
           echo $chat;
         ?>
       </aside>
 
     </section>
 
-    <footer>
+    <footer id="footer">
       <?php require("footer.php"); ?>
     </footer>
 </div>

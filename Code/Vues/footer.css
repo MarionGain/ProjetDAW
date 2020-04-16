@@ -1,7 +1,11 @@
 /*On garde*/
 footer {
 
-    margin: -20px;
+    margin-top: 5%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+
     padding-top : 10px;
     padding-left: 30px;
 
