@@ -26,13 +26,12 @@ $estAidé=0;
     if ($victim->$etat = "Grave" ){
       //placement sur la carte du médecin vers les victimes grave
       Guérir();
-       $victim->$etat="Soigné"; 
+       $victim->$pris_en_charge=true;
     }elseif($victim->$etat = "Léger"){
       //placement sur la carte du médecin vers les victimes légères
       Guérir();
-       $victim->$etat="Soigné"; 
+       $victim->$pris_en_charge=true;
     }
   }
 }
-
 ?>
