@@ -1,11 +1,23 @@
-<?php 
-require("Role.php");
-class MaitreJeu extends Role  
+<?php
+require_once("Role.php");
+require_once("ListeVues.php");
+class MaitreJeu extends Role
 {
-    function __construct($ListeVues,$nom) 
+  private static $_instance = null;
+
+  private function __construct()
 	{
+		$lv = listeVues::getInstance();
 		$nom = "MaitreJeu";
-        parent::__construct($ListeVues,$nom);
+    parent::__construct($lv -> getVues(),$nom);
 	}
+
+  public static function getInstance()
+  {
+     if(is_null(self::$_instance)) {
+       self::$_instance = new MaitreJeu();
+     }
+     return self::$_instance;
+   }
 }
 ?>
