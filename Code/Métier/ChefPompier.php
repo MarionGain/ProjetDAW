@@ -1,7 +1,7 @@
 <?php
 require_once("Role.php");
 require_once("ListeVues.php");
-class MedRepartiteur extends Role
+class ChefPompier extends Role
 {
   private static $_instance = null;
 
@@ -11,19 +11,19 @@ class MedRepartiteur extends Role
 		$lv = listeVues::getInstance();
 		foreach($lv -> getVues() as $value)
 		{
-			if($value -> getNom() == "VueEvac")
+			if($value -> getNom() == "VueDSM")
 			{
 				array_push($l,$value);
 			}
 		}
-		$nom = "MedRepartiteur";
+		$nom = "ChefPompier";
     parent::__construct($l,$nom);
 	}
 
   public static function getInstance()
   {
      if(is_null(self::$_instance)) {
-       self::$_instance = new MedRepartiteur();
+       self::$_instance = new ChefPompier();
      }
      return self::$_instance;
    }
