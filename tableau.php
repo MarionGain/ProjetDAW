@@ -32,7 +32,7 @@
 					<?php
 						for ($i =0; $i < $nbCamionPompier; $i++)
 						{
-							echo "<td><img src=\"Icones/camionPompier2.png\" alt=\"Pompier\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/camionPompier2.png\" alt=\"Pompier\" id=\"camionPompier$i\" class=\"camionPompiers\"></td>";
 						}
 					?>
 					</tr>
@@ -48,7 +48,7 @@
 					<?php
 						for ($i =0; $i < $nbPompiers; $i++)
 						{
-							echo "<td><img src=\"Icones/Calque 1.png\" alt=\"Pompier\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/Calque 1.png\" alt=\"Pompier\" id=\"pompier$i\" class=\"pompiers\"></td>";
 						}
 					?>
 					</tr>
@@ -74,7 +74,7 @@
 					<?php
 						for ($i =0; $i < $nbMedecin; $i++)
 						{
-							echo "<td><img src=\"Icones/medecin2.png\" alt=\"medecin2\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/medecin2.png\" alt=\"medecin2\" id=\"medecin$i\" class=\"medecins\"></td>";
 						}
 					?>
 					</tr>
@@ -82,7 +82,7 @@
 					<?php
 						for ($i =0; $i < $nbInfirmiere; $i++)
 						{
-							echo "<td><img src=\"Icones/infirmière1.png\" alt=\"infirmiere\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/infirmière1.png\" alt=\"infirmiere\" id=\"infirmiere$i\" class=\"infirmieres\"></td>";
 						}
 					?>
 					</tr>
@@ -90,7 +90,7 @@
 					<?php
 						for ($i =0; $i < $nbAmbulance; $i++)
 						{
-							echo "<td><img src=\"Icones/camionAmbulance1.png\" alt=\"camionAmbulance1\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/camionAmbulance1.png\" alt=\"camionAmbulance1\" id=\"ambulance$i\" class=\"ambulances\"></td>";
 						}
 					?>
 					</tr>
@@ -116,7 +116,7 @@
 					<?php
 						for ($i =0; $i < $nbPolier; $i++)
 						{
-							echo "<td><img src=\"Icones/policier1.png\" alt=\"policier1\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/policier1.png\" alt=\"policier1\" id=\"policier$i\" class=\"policiers\"></td>";
 						}
 					?>
 					</tr>
@@ -132,7 +132,7 @@
 					<?php
 						for ($i =0; $i < $nbVoiturePolice; $i++)
 						{
-							echo "<td><img src=\"Icones/voiturePolice1.png\" alt=\"voiturePolicie1\" id=\"ressource\" draggable=\"true\" ondragstart=\"dragStart(event)\"></td>";
+							echo "<td><img src=\"Icones/voiturePolice1.png\" alt=\"voiturePolicie1\" id=\"voiturePolice$i\" class=\"voiturePolices\" ></td>";
 						}
 					?>
 					</tr>

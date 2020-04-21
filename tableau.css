@@ -1,3 +1,7 @@
-#ressource {
-  width: 30px;
+.camionPompiers, .pompiers, .medecins, .camionPompiers, .infirmieres, .ambulances, .policiers, .voiturePolices{
+  width: 40px;
+  z-index: 1;
+}
+#map{
+  z-index: 0;
 }
