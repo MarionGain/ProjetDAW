@@ -33,6 +33,13 @@ class Pompier extends Personnage
     }elseif ( $idAmbulance->$libre == false ){ echo"L'ambulance n°".$idAmbulance." n'est pas libre"; }
     elseif ($idHopital->$place = 0  || $idHopital->$place <0 ){ echo "L'hopital".$idHopital." n'a plus de place libre";}
   }
+
+  //méthode pour récupèrer la victime
+  public function RecupererVictim(){
+    //déplacement de l'îcone du pompier jusqu'à la victime
+    sleep(20);   //"Met en pause" la fonction pendant 20 secondes pour simuler un timer
+    // déplacement du pompier et de la victime jusqu'au PMA 
+  }
 }
 
 ?>

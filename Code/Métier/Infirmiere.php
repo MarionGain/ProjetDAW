@@ -19,5 +19,13 @@ class Infirmiere extends Personnage
         parent::__get($property); //appel du get de Personnage car Infirmière descends de Personnage
     }
 
+  public fucntion AiderMedecin($victime){
+    if ($victime->$etat == $victime->$etatsPossible[1]){ // on regarde quel est l'état de la victime si c'est Léger
+        $medecin->$estAidé += 1 ; //on attribut au médécin une aide en plus 
+    }elseif ($victime->$etat == $victime->$etatsPossible[2]){// on regarde quel est l'état de la victime si c'est Grave
+        $medecin->$estAidé += 1 ; //on attribut au médécin une aide en plus 
+      }
+  }
+  
 }
 ?>
