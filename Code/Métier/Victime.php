@@ -6,6 +6,8 @@ $etatsPossible= array("Soigné","Léger","Grave","Psychologique","Mort");
 $etat=$etatsPossible[0];
 $pris_en_charge=false;
 $idVictime=123;
+$age=18;
+$description_blessure="Il a rien";
 
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Victime descends de Personnage
@@ -56,6 +58,12 @@ $idVictime=123;
     elseif ('id' == $property) {
       $this->$idVictime=$value;
     }
+    elseif ('age' == $property) {
+      $this->$age=$value;
+    }
+    elseif ('description' == $property) {
+      $this->$description_blessure=$value;
+    }
     else {
       parent::__set($property,$value); //sinon appel du set de Personnage car Victime descends de Personnage
     }
@@ -70,6 +78,12 @@ $idVictime=123;
     }
     elseif ('id' == $property) {
       return $this->$idVictime;
+    }
+    elseif ('age' == $property) {
+      return $this->$age;
+    }
+    elseif ('description' == $property) {
+      return $this->$description_blessure;
     }
     else {
       parent::__get($property); //appel du get de Personnage car Victime descends de Personnage
