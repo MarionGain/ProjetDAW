@@ -75,7 +75,7 @@
 				
 			<tr>
 				<?php
-					echo "<td><img src=\"Icones/pma.png\" alt=\"pma\"></td>";
+					echo "<td><img src=\"Icones/pma.png\" alt=\"pma\" id=\"PMA\"></td>";
 				?>
 			</tr>
 		</table>

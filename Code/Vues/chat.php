@@ -8,7 +8,6 @@
 </head>
 <body onload="init()">
 					
-	<script  type="text/javascript" src="chat.js"></script>
 		
 	<?php
 		$tableau="<div class='tab'
@@ -53,4 +52,3 @@
 
 </body>
 </html>
-		<script  type="text/javascript" src="chat.js"></script>

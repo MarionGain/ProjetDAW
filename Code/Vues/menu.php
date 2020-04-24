@@ -12,8 +12,8 @@
         function affiche_menu()
         {
             //Tableaux contenant des liens originaux et du texte original à afficher
-            $tab_lien = array( "VUE1.php", "VUE2.php", "VUE3.php", "VUE4.php");
-            $tab_texte = array( "Vue1", "CRRA", "Vue3", "Vue4");
+            $tab_lien = array( "VUE1.php", "VUE2.php", "DSM.php", "trieur.php");
+            $tab_texte = array( "Vue1", "CRRA", "DSM", "Trieur");
 
             //Informations sur la page actuelle
             $info = pathinfo($_SERVER['PHP_SELF']);
