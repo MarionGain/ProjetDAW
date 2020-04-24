@@ -1,6 +1,3 @@
-
-
-
 function init(){
 
 
@@ -9,7 +6,6 @@ var reduire = document.getElementById("reduire");
 var cellule = document.getElementById("cellule");
 var chat = document.getElementById("chat");
 
-cellule.addEventListener("click", function (){OuvrirPopup('chat.php','menu','width=200, height=100, bottom=10, right=10')});
 cellule.addEventListener("click", afficheChat);
 
 fermer.addEventListener("mouseover", changeIcone);
@@ -23,11 +19,6 @@ fermer.addEventListener("click", fermeture);
 reduire.addEventListener("click", reduction);
 
 }
-
-function OuvrirPopup(page, nom, option) {
-  window.open(page, nom, option);
-}
-
 
 function afficheChat(){
 	var chat = document.getElementById("chat");
