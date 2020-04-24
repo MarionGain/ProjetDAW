@@ -5,7 +5,7 @@ abstract class Soigneur extends Personnage {
   abstract protected function SoignerVictimes();
   function __construct() {
         parent::__construct(); //appel du contructeur de Personnage car Soigneur descends de Personnage
-        print "Constructeur de Personnage\n";
+        print "Constructeur de Soigneur\n";
     }
 
     function __destruct() {
