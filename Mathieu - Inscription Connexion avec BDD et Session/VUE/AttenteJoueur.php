@@ -3,8 +3,8 @@
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script  type="text/javascript" src="AttenteJoueur.js"></script>
-    <link href="/projet/styles/acceuil.css" rel="stylesheet">
-    <link href="/projet/styles/tableau.css" rel="stylesheet">
+    <link href="../styles/acceuil.css" rel="stylesheet">
+    <link href="../styles/tableau.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>En attente</title>
   </head>

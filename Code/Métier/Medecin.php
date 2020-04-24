@@ -1,12 +1,12 @@
 <?php
-require("Personnage.php");
-class Medecin extends Personnage
+require("Soigneur.php");
+class Medecin extends Soigneur
 {
 
 $estAidé=0;
 
   function __construct() {
-        parent::__construct(); //appel du constructeur de Personnage car Medecin descends de Personnage
+        parent::__construct(); //appel du constructeur de Soigneur car Medecin descends de Soigneur
         print "Constructeur de Medecin\n";
     }
 
@@ -15,11 +15,11 @@ $estAidé=0;
     }
 
   public function __set($property, $value) {
-        parent::__set($property,$value); //appel du set de Personnage car Medecin descends de Personnage
+        parent::__set($property,$value); //appel du set de Soigneur car Medecin descends de Soigneur
     }
 
   public function __get($property) {
-        parent::__get($property); //appel du get de Personnage car Medecin descends de Personnage
+        parent::__get($property); //appel du get de Soigneur car Medecin descends de Soigneur
     }
 
   public function SoignerVictimes(){
