@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOG/LfX4Zd0apXV6dPNWsKAAAAAACAAAAAAADZgAAwAAAABAAAABNFh0Tu3w2MJZNj169n8JfAAAAAASAAACgAAAAEAAAAAhS5W9QHOEKGQhCmj0bivIYAAAA3akHtPDM5D8zecHGR9c5A+rP2ea/MhQcFAAAAHo0uOw1/QHrn5Km80peBxqpN/E8</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="controleurs/ControleurPrincipal.php">
+      <publishTime>01/10/2019 10:41:00</publishTime>
+    </File>
+    <File Include="index.php">
+      <publishTime>01/10/2019 10:30:41</publishTime>
+    </File>
+    <File Include="vue/Vue.php">
+      <publishTime>01/10/2019 10:40:08</publishTime>
+    </File>
+    <File Include="vues/VueAccueil.php">
+      <publishTime>01/10/2019 10:46:13</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>01/10/2019 09:21:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
