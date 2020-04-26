@@ -1,0 +1,132 @@
+
+body{
+
+  /*font-size : 1.2em;*/
+  font-family: cursive;
+
+  background-color: grey;
+  background-image: url("../images/fond_ecran.png");
+
+/*  height: 100%;
+  width: 100%;
+  margin : 0px;*/
+
+}
+
+h1 {
+	text-align: center;
+}
+
+.graves{
+
+	
+/*	width : 1000px;
+	height : 800px;*/
+/*	height: 900px;
+	width : 100%;*/
+
+	display: flex;
+	margin: auto;
+	width: 70%;
+	/*background-image: url("Images/pma_grave.png");*/
+	background-color: white;
+	/*padding-left: 100px;*/
+	background-repeat: no-repeat;
+	background-size:contain;
+	border : 2px solid black;
+
+
+	/*margin : auto;*/
+}
+
+#pma_grave{
+	width: 100%;
+}
+
+.legers {
+
+	width: 50%;
+	border : 1px solid black;
+	/*height: 450px;
+	width : 650px;*/
+	margin: auto;
+
+	/*background-image: url("Images/pma_leger.png");*/
+	background-color: white;
+
+	/*margin-bottom: -20%;*/
+/*	background-repeat: no-repeat;
+	background-size: contain;*/
+}
+
+.psy {
+
+/*margin: auto;*/
+	width: 50%;
+	/*padding-right: 0px;*/
+	border : 1px solid black;
+	background-size: contain;
+	background-color: white;
+	/*margin-bottom: -20%;*/
+	/*background-image: url("Images/pma_psy.png");*/
+	background-repeat: no-repeat;
+}
+
+.bas{
+
+	margin : auto;
+	
+	/*padding-bottom: -200px;*/
+	width :80%;
+	/*max-width: 300px;*/
+	/*height: 80%;*/
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	border : 1px solid black;
+	border-collapse: collapse;
+}
+
+.patients{
+	position: absolute;
+	left : 200px;
+	top : 200px;
+}
+
+#patientgrave1{
+	width: 250px;
+/*	margin-top :-50px;
+	margin-left: -85px;*/
+}
+
+#patientgrave2{
+	width: 200px;
+	margin-top : -50px;
+	margin-left :-150px;
+}
+
+
+
+#patientleger1{
+	width: 200px;
+	margin-top : 70px;
+	margin-left: -85px;
+}
+
+#patientleger2{
+	width: 200px;
+	margin-top : -200px;
+	margin-left :-150px;
+}
+
+#patientpsy1{
+	width: 200px;
+	margin-top :60px;
+	margin-left : -95px;
+}
+
+#patientpsy2{
+	width: 200px;
+	margin-top :70px;
+	margin-left : -150px;
+}
