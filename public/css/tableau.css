@@ -9,8 +9,12 @@
 	box-shadow: 3px 2px 2px black;
 	background-color: rgb(5,64,87);
 	z-index: 1;
-
+	/*position: absolute;*/
 }
+
+/*#policier {
+	position: absolute;
+}*/
 
 .tableau table {
 
@@ -41,12 +45,19 @@
 
 	width: 90%;
 	min-width: 100px;
-	position: relative;
+	/*position: relative;*/
 	max-height: 700px;
 	height: 75%;
+	/*position: fixed;*/
+	/*scroll-behavior: smooth;*/
 
-	scroll-behavior: smooth;
+	/*overflow-x: hidden;*/
+	/*overflow-y: auto;*/
+}
+
+#tableau {
 	overflow: auto;
+	scroll-behavior: smooth;
 }
 
 .tableau td, th {

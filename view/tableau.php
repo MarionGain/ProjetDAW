@@ -3,12 +3,12 @@
   <head>
 	 <?php require("data.php"); ?>
 	 <link href="../public/css/tableau.css" rel="stylesheet">
-	 <!-- <script type="text/script" src="../public/js/draganddrop.js" ></script> -->
+	 <script type="text/script" src="../public/js/drag.js" ></script>
    <meta charset="utf-8">
    <title></title>
   </head>
   <body>
-  	<div class="tableau">
+  	<div class="tableau" id="tableau">
 
   		<h1>Renfort</h1>
 		<table>
@@ -17,7 +17,7 @@
 				<th>Pompiers</th>
 			</tr> 
 			<tr>
-				<td><img src="../public/icones/camionPompier2.png" alt="Pompier" id="camionPompier"></td>
+				<?php echo "<td><img src=\"../public/icones/camionPompier2.png\" alt=\"Pompier\" id=\"camionPompier\"></td>"; ?>
 			</tr>
 			<tr>
 				<td><img src="../public/icones/Calque 1.png" alt="Pompier" id="pompier"></td>
