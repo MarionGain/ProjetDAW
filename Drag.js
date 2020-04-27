@@ -1,47 +1,61 @@
-function jesaispasmoi(param) {
-	$(function(){$(param).draggable({containment:'#map'});
-});
+function drag(param) {
+	$(function(){$(param).draggable({containment:'#map'});});
 }
 
-var pompier = document.getElementsByClassName('pompiers');
-var camionPompier = document.getElementsByClassName('camionPompiers');
-var medecin = document.getElementsByClassName('medecins');
-var infirmiere = document.getElementsByClassName('infirmieres');
-var ambubulance = document.getElementsByClassName('ambulances');
-var policier = document.getElementsByClassName('policiers');
-var voiturePolice = document.getElementsByClassName('voiturePolices');
-
-for (var i=0; i<pompier.length;i++){
-	var name = "#"+pompier[i].id;
-	jesaispasmoi(name);
+function dragstart(icone){
+	icone.addEventListener('mousedown', function(){icone.style.position="absolute";});
 }
 
-for (var i = 0; i < camionPompier.length; i++) {
-	var name = "#"+camionPompier[i].id;
-	jesaispasmoi(name);
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var cookies = document.cookie.split(';');
+	for(var i=0;i < cookies.length;i++) {
+		var cookie = cookies[i];
+		while (cookie.charAt(0)==' ') cookie = cookie.substring(1,cookie.length);
+		if (cookie.indexOf(nameEQ) == 0) return cookie.substring(nameEQ.length,cookie.length);
+	}
+	return null;
 }
 
-for (var i = 0; i < medecin.length; i++) {
-	var name = "#"+medecin[i].id;
-	jesaispasmoi(name);
-}
+var pompier = document.getElementById('pompier');
+var camionPompier = document.getElementById('camionPompier');
+var medecin = document.getElementById('medecin');
+var infirmiere = document.getElementById('infirmiere');
+var ambulance = document.getElementById('ambulance');
+var policier = document.getElementById('policier');
+var voiturePolice = document.getElementById('voiturePolice');
+var pma = document.getElementById('pma');
 
-for (var i = 0; i < infirmiere.length; i++) {
-	var name = "#"+infirmiere[i].id;
-	jesaispasmoi(name);
-}
+var pompierCookied = readCookie("pompier");
+var camionPompierCookied = readCookie("camionPompier");
+var ambulanceCookied = readCookie("ambulance");
+var medecinCookied = readCookie("medecin");
+var infirmiereCookied = readCookie("infirmiere");
+var policierCookied = readCookie("policier");
+var voiturePoliceCookied = readCookie("voiturePolice");
 
-for (var i = 0; i < ambubulance.length; i++) {
-	var name = "#"+ambubulance[i].id;
-	jesaispasmoi(name);
-}
+dragstart(policier);
+dragstart(pompier);
+dragstart(camionPompier);
+dragstart(ambulance);
+dragstart(medecin);
+dragstart(infirmiere);
+dragstart(pma);
+dragstart(voiturePolice);
 
-for (var i = 0; i < policier.length; i++) {
-	var name = "#"+policier[i].id;
-	jesaispasmoi(name);
-}
+drag(policier);
+drag(pompier);
+drag(medecin);
+drag(infirmiere);
+drag(ambulance);
+drag(pma);
+drag(camionPompier);
+drag(voiturePolice);
 
-for (var i = 0; i < voiturePolice.length; i++) {
-	var name = "#"+voiturePolice[i].id;
-	jesaispasmoi(name);
-}
+console.log(pompierCookied);
+console.log(camionPompierCookied);
+console.log(ambulanceCookied);
+console.log(medecinCookied);
+console.log(infirmiereCookied);
+console.log(policierCookied);
+console.log(voiturePoliceCookied);
