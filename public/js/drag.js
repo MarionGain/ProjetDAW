@@ -6,6 +6,24 @@ function drag(param) {
 }
 
 
+function dragstart(icone){
+	icone.addEventListener('mousedown', function(){
+		icone.style.border="none"; 
+		icone.style.padding="0px"; 
+		icone.style.backgroundColor="rgba(5,64,87,0)"; 
+		icone.style.position="absolute"; 
+		if(icone.id=="pma"){
+			icone.style.maxWidth="100px";
+			icone.style.maxHeight="100px";
+		}
+			
+
+		else 
+		icone.style.width="30px";
+		 });
+
+}
+
 
 var pompier = document.getElementById('pompier');
 var camionPompier = document.getElementById('camionPompier');
@@ -15,45 +33,19 @@ var ambubulance = document.getElementById('ambulance');
 var policier = document.getElementById('policier');
 var voiturePolice = document.getElementById('voiturePolice');
 var pma = document.getElementById('pma');
-drag(policier);
 
-// 	policier.addEventListener('mousedown', function(){
-// 	policier.style.position="absolute";
-// });
-
-// 	pompier.addEventListener('mousedown', function(){
-// 	pompier.style.position="absolute";
-// });
-
-// 	camionPompier.addEventListener('mousedown', function(){
-// 	camionPompier.style.position="absolute";
-// });
-
-
-// 	infirmiere.addEventListener('mousedown', function(){
-// 	infirmiere.style.position="absolute";
-// });
-
-function dragstart(icone){
-	icone.addEventListener('mousedown', function(){icone.style.position="absolute";});
-
-}
 
 dragstart(policier);
 dragstart(pompier);
-
-dragstart(camionPompier);
-dragstart(ambulance);
-
-
-
-
 dragstart(medecin);
 dragstart(infirmiere);
 
+dragstart(camionPompier);
+dragstart(ambulance);
 dragstart(pma);
 dragstart(voiturePolice);
 
+drag(policier);
 drag(pompier);
 drag(medecin);
 drag(infirmiere);

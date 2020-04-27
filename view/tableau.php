@@ -16,11 +16,13 @@
 			<tr>
 				<th>Pompiers</th>
 			</tr> 
-			<tr>
+			<tr id="test">
 				<?php echo "<td><img src=\"../public/icones/camionPompier2.png\" alt=\"Pompier\" id=\"camionPompier\"></td>"; ?>
+				<!-- <select id="listePompier"><option>Evacuer</option></select> -->
 			</tr>
 			<tr>
 				<td><img src="../public/icones/Calque 1.png" alt="Pompier" id="pompier"></td>
+				<td><select id="listePompier"><option>Evacuer</option><option>Bla</option></select></td>
 			</tr>
 
 		</table>

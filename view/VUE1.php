@@ -9,7 +9,7 @@
     <title>Page</title>
   </head>
 
-  <body>
+  <body  onload="init()">
     <div class="page">
 
     <!-- En-tête -->
@@ -52,5 +52,7 @@
     </footer>
   </div>
   </body>
+  <script src="../public/js/vue.js"></script>
   <script src="../public/js/drag.js"></script>
+  <script src="../public/js/map.js"></script>
 </html>
