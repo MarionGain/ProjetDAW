@@ -1,14 +1,14 @@
 <?php
-require("Personnage.php");
+require_once("Personnage.php");
 class Pompier extends Personnage
 {
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Pompier descends de Personnage
-        print "Constructeur de pompier\n";
+        //print "Constructeur de pompier\n";
     }
 
   function __destruct() {
-        print "Destruction de " . __CLASS__ . "\n";
+        //print "Destruction de " . __CLASS__ . "\n";
     }
 
   public function __set($property, $value) {
@@ -20,7 +20,7 @@ class Pompier extends Personnage
     }
 
     //méthode pour évacuer une victime
-  private function EvacuerVictim($idVictim,$idAmbulance,$Demandeur,$idHopital){ 
+  private function EvacuerVictim($idVictim,$idAmbulance,$Demandeur,$idHopital){
     if ( $idAmbulance->$libre == true && $idHopital->$place >0 ){
       //il faut vérifier que le médecin qui demande l'évacuation est bien un médecin répartiteur
       if($Demandeur instanceof MedRepartiteur){
@@ -38,7 +38,7 @@ class Pompier extends Personnage
   public function RecupererVictim(){
     //déplacement de l'îcone du pompier jusqu'à la victime
     sleep(20);   //"Met en pause" la fonction pendant 20 secondes pour simuler un timer
-    // déplacement du pompier et de la victime jusqu'au PMA 
+    // déplacement du pompier et de la victime jusqu'au PMA
   }
 }
 

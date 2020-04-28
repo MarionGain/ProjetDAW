@@ -4,6 +4,7 @@
 	$nbAmbulance = 3;
 	$nbMedecin = 4;
 	$nbInfirmiere = 8;
-	$nbPolier = 3;
+	$nbPolicier = 3;
 	$nbVoiturePolice = 2;
+	$nbVictimes = 10;
 ?>

@@ -1,17 +1,54 @@
 <?php
+require_once("Ressource.php");
 class Ambulance extends Ressource {
 
-$id_Ambulance=0;
-$libre=false;
+Private $id_Ambulance;
+Private $libre;
 
-function __construct() {
+function __construct($id) {
+      $this -> id_Ambulance = $id;
+      $this -> libre = false;
       parent::__construct(); //appel du contructeur de Ressource car Ambulance descends de Ressource
-      print "Constructeur de l'ambulance\n";
+      //print "Constructeur de l'ambulance\n";
   }
 
 function __destruct() {
-      print "Destruction de " . __CLASS__ . "\n";
+      //print "Destruction de " . __CLASS__ . "\n";
   }
+
+public function getId()
+{
+  return $this -> id_Ambulance;
+}
+
+public function getLibre()
+{
+  return $this -> libre;
+}
+
+public function AfficheLibre()
+{
+  if($this -> libre == false)
+  {
+    return "occupé";
+  }
+  elseif($this -> libre == true)
+  {
+    return "disponible";
+  }
+}
+
+public function changeLibre()
+{
+  if($this -> libre == false)
+  {
+    $this -> libre == true;
+  }
+  elseif($this -> libre == true)
+  {
+    $this -> libre == false;
+  }
+}
 
 public function __set($property, $value) { //set de l'Ambulance (position et image dans la classe Ressource)
       if('position' == $property){ //si on veux changer la position

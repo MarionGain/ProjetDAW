@@ -1,16 +1,16 @@
-<?php 
-class Joueurs 
+<?php
+class Joueurs
 {
-    private $_login ; 
+    private $_login ;
     private $_role ;
-    private $_simulation ; 
+    //private $_simulation ;
 
-    function __construct($_l,$_r,$_s){
+  function __construct($_l,$_r,/*$_s*/){
         $this->$_login = $_l;
         $this->$_role = $_r;
-        $this->$_simulation = $_s;
+        //$this->$_simulation = $_s;
         print"Constructeur du joueur\n";
-    }   
+    }
 
     function __destruct(){
         print "Destruction de " . __CLASS__ . "\n";
@@ -47,7 +47,7 @@ class Joueurs
     }
 
     public function getJoueur($property){ //pour récupèrer le joueur en entier
-        return $this ; 
+        return $this ;
     }
 }
 

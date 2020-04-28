@@ -1,15 +1,17 @@
 <?php
+require_once("Ressource.php");
 class Voiture_Police extends Ressource {
 
-$id_VoiturePolice=0;
+Private $id_VoiturePolice;
 
 function __construct() {
+      $this -> id_VoiturePolice = 0;
       parent::__construct(); //appel du contructeur de Ressource car Voiture_Police descends de Ressource
-      print "Constructeur de la Voiture de Police\n";
+      //print "Constructeur de la Voiture de Police\n";
   }
 
 function __destruct() {
-      print "Destruction de " . __CLASS__ . "\n";
+      //print "Destruction de " . __CLASS__ . "\n";
   }
 
 public function __set($property, $value) { //set de Voiture_Police (position et image dans la classe Ressource)

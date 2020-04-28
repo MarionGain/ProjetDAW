@@ -1,17 +1,18 @@
 <?php
-require("Soigneur.php");
+require_once("Soigneur.php");
 class Medecin extends Soigneur
 {
 
-$estAidé=0;
+Private $estAidé;
 
   function __construct() {
+      $this -> estAidé = 0;
         parent::__construct(); //appel du constructeur de Soigneur car Medecin descends de Soigneur
-        print "Constructeur de Medecin\n";
+        //print "Constructeur de Medecin\n";
     }
 
   function __destruct() {
-        print "Destruction de " . __CLASS__ . "\n";
+        //print "Destruction de " . __CLASS__ . "\n";
     }
 
   public function __set($property, $value) {
