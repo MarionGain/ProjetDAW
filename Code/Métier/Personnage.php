@@ -4,7 +4,7 @@ class Personnage extends Ressource
 {
   function __construct()
   {
-        parent::__construct(); //appel du contructeur de Ressource car personnage descends de Ressource
+        //parent::__construct(); //appel du contructeur de Ressource car personnage descends de Ressource
         //print "Constructeur de personnage\n";
   }
 
