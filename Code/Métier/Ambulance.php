@@ -42,11 +42,11 @@ public function changeLibre()
 {
   if($this -> libre == false)
   {
-    $this -> libre == true;
+    $this -> libre = true;
   }
   elseif($this -> libre == true)
   {
-    $this -> libre == false;
+    $this -> libre = false;
   }
 }
 
@@ -58,10 +58,10 @@ public function __set($property, $value) { //set de l'Ambulance (position et ima
         $this->_icone->image=$value; //on lui affecte une valeur
       }
       elseif ('id' == $property) { //si on veux changer l'id
-        $this->$id_Ambulance=$value; //on lui affecte une valeur
+        $this->id_Ambulance=$value; //on lui affecte une valeur
       }
       elseif ('libre' == $property) { //si on veux changer l'attribut libre
-        $this->$libre=$value; //on lui affecte une valeur
+        $this->libre=$value; //on lui affecte une valeur
       }
       else {
         throw new Exception('Paramètre invalide !'); //sinon on retourne une erreur
@@ -76,10 +76,10 @@ public function __get($property) {//get de l'Ambulance (position et image dans l
         return $this->_icone->image; //on la retourne
       }
       elseif ('id' == $property) { //si on veux l'id
-        return $this->$id_Ambulance; //on le retourne
+        return $this->id_Ambulance; //on le retourne
       }
       elseif ('libre' == $property) { //si on veux l'attribut libre
-        return $this->$libre; //on le retourne
+        return $this->libre; //on le retourne
       }
       else {
         throw new Exception('Paramètre invalide !'); //sinon on retourne une erreur

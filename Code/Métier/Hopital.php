@@ -18,6 +18,11 @@ class Hopital extends Ressource
     return $this -> _nbLitDispo;
   }
 
+  public function setnbLit1()
+  {
+    $this -> _nbLitDispo -=1;
+  }
+  
   public function getNom()
   {
     return $this -> _nom;
