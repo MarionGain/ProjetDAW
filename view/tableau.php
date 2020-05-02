@@ -22,7 +22,7 @@
 			</tr>
 			<tr>
 				<td><img src="../public/icones/Calque 1.png" alt="Pompier" id="pompier"></td>
-				<td><select id="listePompier"><option>Evacuer</option><option>Bla</option></select></td>
+				<td><select id="listePompier"><option>Actions</option><option>Evacuer</option><option>Bla</option></select></td>
 			</tr>
 
 		</table>
@@ -52,6 +52,7 @@
 			</tr>
 			<tr>	
 				<td><img src="../public/icones/voiturePolice1.png" alt="voiturePolicie1" id="voiturePolice"></td>
+				<td><select id="listePolice"><option>Actions</option><option>Surveiller la morgue</option><option>Gérer la circulation</option><option>Identifier les victimes</option></select></td>
 			</tr>
 
 </table>

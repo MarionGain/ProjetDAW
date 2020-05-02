@@ -13,10 +13,44 @@ body{
 
 }
 
+aside {
+
+	width: 15%;
+  	max-width: 300px;
+  	min-width: 100px;
+  	float: left;
+}
+
 h1 {
 	text-align: center;
 }
 
+article table, article td, article tr {
+
+	border-collapse: collapse;
+	border : 1px solid black;
+	background-color: white;
+
+}
+
+img {
+	width: 100%;
+}
+
+article {
+
+	margin-top: 5%;
+	margin-left : 15%;
+	border : 1px solid black;
+	background-color: rgba(255,255,255, 0.75);
+	border-radius: 10px;
+	box-shadow: 3px 2px 2px black;
+/*	max-height: 800px;
+  	height: 100%;
+  	width : 50%;
+  	min-width: 400px;*/
+	width : 80%;
+}
 .graves{
 
 	
@@ -24,35 +58,37 @@ h1 {
 	height : 800px;*/
 /*	height: 900px;
 	width : 100%;*/
-
-	display: flex;
+	width: 80%;
+	margin : auto;
+/*	display: flex;
 	margin: auto;
 	width: 70%;
 	/*background-image: url("Images/pma_grave.png");*/
-	background-color: white;
+	/*background-color: white;
 	/*padding-left: 100px;*/
-	background-repeat: no-repeat;
-	background-size:contain;
-	border : 2px solid black;
+	/*background-repeat: no-repeat;
+	/*background-size:contain;*/
+	/*border : 2px solid black;*/
 
 
 	/*margin : auto;*/
 }
 
-#pma_grave{
+/*#pma_grave{
 	width: 100%;
-}
+}*/
 
 .legers {
 
 	width: 50%;
-	border : 1px solid black;
+	/*border : 1px solid black;*/
 	/*height: 450px;
 	width : 650px;*/
-	margin: auto;
+	/*margin: auto;*/
+	margin-right: 10px;
 
-	/*background-image: url("Images/pma_leger.png");*/
-	background-color: white;
+
+	/*background-color: white;*/
 
 	/*margin-bottom: -20%;*/
 /*	background-repeat: no-repeat;
@@ -61,15 +97,15 @@ h1 {
 
 .psy {
 
-/*margin: auto;*/
+	/*margin: auto;*/
 	width: 50%;
 	/*padding-right: 0px;*/
-	border : 1px solid black;
+/*
 	background-size: contain;
-	background-color: white;
+	background-color: white;*/
+
 	/*margin-bottom: -20%;*/
-	/*background-image: url("Images/pma_psy.png");*/
-	background-repeat: no-repeat;
+	
 }
 
 .bas{
@@ -78,55 +114,14 @@ h1 {
 	
 	/*padding-bottom: -200px;*/
 	width :80%;
-	/*max-width: 300px;*/
+	/*max-width: 300px;
 	/*height: 80%;*/
+
 	margin-top: 5%;
 	display: flex;
 	flex-direction: row;
-	border : 1px solid black;
-	border-collapse: collapse;
-}
-
-.patients{
-	position: absolute;
-	left : 200px;
-	top : 200px;
-}
-
-#patientgrave1{
-	width: 250px;
-/*	margin-top :-50px;
-	margin-left: -85px;*/
-}
-
-#patientgrave2{
-	width: 200px;
-	margin-top : -50px;
-	margin-left :-150px;
+	/*border : 1px solid black;*/
+	/*border-collapse: collapse;*/
 }
 
 
-
-#patientleger1{
-	width: 200px;
-	margin-top : 70px;
-	margin-left: -85px;
-}
-
-#patientleger2{
-	width: 200px;
-	margin-top : -200px;
-	margin-left :-150px;
-}
-
-#patientpsy1{
-	width: 200px;
-	margin-top :60px;
-	margin-left : -95px;
-}
-
-#patientpsy2{
-	width: 200px;
-	margin-top :70px;
-	margin-left : -150px;
-}

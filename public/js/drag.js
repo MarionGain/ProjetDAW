@@ -2,7 +2,6 @@ function drag(param) {
 	
 	$(function(){$(param).draggable({containment:'#map'});});
 
-
 }
 
 
@@ -20,9 +19,32 @@ function dragstart(icone){
 
 		else 
 		icone.style.width="30px";
-		 });
+		
+	});
+	pma.addEventListener('mouseup', placerMorgue);
 
 }
+
+
+function placerMorgue(){
+	if(pma.style.left != "0px"){
+		morgue.style.width = "30px";
+		morgue.style.position = "absolute";
+
+		// alert(getComputedStyle(pma).left);
+		var left = parseInt(getComputedStyle(pma).left)+ 30 + "px";
+		var top = parseInt(getComputedStyle(pma).top) - 30 + "px";
+
+		// alert(left);
+		morgue.style.left =left;
+		// var top = getComputedStyle(pma).top;
+		morgue.style.top = top;
+
+		morgue.style.visibility = "visible";
+		// morgue.style.position="fixed";
+	}
+}
+
 
 
 var pompier = document.getElementById('pompier');

@@ -8,54 +8,59 @@
 
   <body>
     <div class="page">
-
- 
-  
     <section id="section">
-       <h1>PMA</h1>
+      <h1>PMA</h1>
       <aside>
-        
+        <?php require_once("tableau.php");
+        ?>
       </aside>
+      <article class="pma">
+        <div class="graves">
+          <p>
+            <table> 
+              <tr> 
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+              </tr>
+            </table>
+          </p>
+        </div>
 
-      <article class="graves">
-        
-       
-        <p>
-          <img src="../public/images/pma_grave.png" alt="pma" id="pma_grave"/>
-          <img src="../public/icones/patient.png" alt="patient" id="patientgrave1"class="patients"/>
-          <img src="../public/icones/patient.png" alt="patient" id="patientgrave2"class="patients"/>
-          <!-- <img src="Images/patient.png" alt="patient" id="patient3"/> -->
-        </p>
+        <div class="bas">
+          <div class="legers">
+            <p>
+             <table> 
+                <tr> 
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                </tr>
+              </table>
+            </p>
+          </div>
 
-
+          <div class="psy">
+           <p>
+             <table> 
+                <tr> 
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                  <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patients"/></td>
+                </tr>
+              </table>
+            </p>
+          </div>
+        </div>
       </article>
-      <div class="bas">
-      <article class="legers">
-        <p>
-          
-          <img src="../public/images/pma_leger.png" alt="pma" id="pma_leger"/>
-         <!--  <img src="Images/patient.png" alt="patient" id="patientleger1" class="patients"/>
-          <img src="Images/patient.png" alt="patient" id="patientleger2" class="patients"/> -->
-          <!-- <img src="Images/patient.png" alt="patient" id="patient3"/> -->
-        </p>
-      </article>
-
-
-      <article class="psy">
-        <p>
-          <img src="../public/images/pma_psy.png" alt="pma" id="pma_psy"/><!-- 
-          <img src="Images/patient.png" alt="patient" id="patientpsy1"class="patients"/>
-          <img src="Images/patient.png" alt="patient" id="patientpsy2"class="patients"/> -->
-          <!-- <img src="Images/patient.png" alt="patient" id="patient3"/> -->
-        </p>
-      </article>
-    </div>
-      <aside>
-        
-      </aside>
-
     </section>
-
   </div>
   </body>
 </html>

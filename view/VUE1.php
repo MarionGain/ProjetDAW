@@ -23,10 +23,12 @@
     </div>
 
     <section id="section">
-      <aside>
+
+      <aside class="tableau">
         <?php
           require_once("tableau.php");
         ?>
+        <img src="../public/icones/morgue.png" id="morgue"/>
       </aside>
 
       <article>
