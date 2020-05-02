@@ -17,6 +17,15 @@ function readCookie(name) {
 	return null;
 }
 
+function duplicate(img,nb) {
+	if(typeof img=='string') { img = document.getElementById(img); }
+	for (var i = 1; i < nb; i++) {
+		var clone = jQuery.extend(true, {}, img);
+		clone.id = img.id+i;
+		console.log(clone);
+	}
+}
+
 var pompier = document.getElementById('pompier');
 var camionPompier = document.getElementById('camionPompier');
 var medecin = document.getElementById('medecin');
@@ -33,6 +42,8 @@ var medecinCookied = readCookie("medecin");
 var infirmiereCookied = readCookie("infirmiere");
 var policierCookied = readCookie("policier");
 var voiturePoliceCookied = readCookie("voiturePolice");
+
+
 
 dragstart(policier);
 dragstart(pompier);
@@ -51,6 +62,8 @@ drag(ambulance);
 drag(pma);
 drag(camionPompier);
 drag(voiturePolice);
+
+duplicate(pompier,pompierCookied);
 
 console.log(pompierCookied);
 console.log(camionPompierCookied);
