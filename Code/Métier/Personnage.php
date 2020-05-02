@@ -4,11 +4,11 @@ class Personnage extends Ressource
 {
   function __construct() {
         parent::__construct(); //appel du contructeur de Ressource car personnage descends de Ressource
-        print "Constructeur de personnage\n";
+        //print "Constructeur de personnage\n";
     }
 
   function __destruct() {
-        print "Destruction de " . __CLASS__ . "\n";
+        //print "Destruction de " . __CLASS__ . "\n";
     }
 
   public function __set($property, $value) { //set pour position et image de l'icone du personnage (icone dans la classe Ressource)

@@ -4,11 +4,11 @@ class Infirmiere extends Personnage
 {
   function __construct() {
         parent::__construct(); //appel du constructeur de Personnage car Infirmiere descends de Personnage
-        print "Constructeur d'Infirmiere\n";
+        //print "Constructeur d'Infirmiere\n";
     }
 
   function __destruct() {
-        print "Destruction de " . __CLASS__ . "\n";
+        //print "Destruction de " . __CLASS__ . "\n";
     }
 
   public function __set($property, $value) {
@@ -19,13 +19,11 @@ class Infirmiere extends Personnage
         parent::__get($property); //appel du get de Personnage car Infirmière descends de Personnage
     }
 
-  public fucntion AiderMedecin($victime){
-    if ($victime->$etat == $victime->$etatsPossible[1]){ // on regarde quel est l'état de la victime si c'est Léger
-        $medecin->$estAidé += 1 ; //on attribut au médécin une aide en plus 
-    }elseif ($victime->$etat == $victime->$etatsPossible[2]){// on regarde quel est l'état de la victime si c'est Grave
-        $medecin->$estAidé += 1 ; //on attribut au médécin une aide en plus 
+    public function AiderMedecin($victime,$medecin){
+      if ($victime->getEtat() == "Léger" || $victime->getEtat() == "Grave"){ // on regarde quel est l'état de la victime si c'est Léger
+        $medecin->setNbAide1(); 
       }
-  }
+    }
   
 }
 ?>

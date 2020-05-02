@@ -3,12 +3,12 @@ class Joueurs
 {
     private $_login ; 
     private $_role ;
-    private $_simulation ; 
+    //private $_simulation ; 
 
     function __construct($_l,$_r,$_s){
         $this->$_login = $_l;
         $this->$_role = $_r;
-        $this->$_simulation = $_s;
+        //$this->$_simulation = $_s;
         print"Constructeur du joueur\n";
     }   
 

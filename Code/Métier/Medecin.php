@@ -3,16 +3,17 @@ require("Soigneur.php");
 class Medecin extends Soigneur
 {
 
-$estAidé=0;
+  Private $estAide;
 
   function __construct() {
-        parent::__construct(); //appel du constructeur de Soigneur car Medecin descends de Soigneur
-        print "Constructeur de Medecin\n";
-    }
+    $this -> estAide = 0;
+    parent::__construct(); //appel du constructeur de Soigneur car Medecin descends de Soigneur
+        //print "Constructeur de Medecin\n";
+  }
 
   function __destruct() {
-        print "Destruction de " . __CLASS__ . "\n";
-    }
+        //print "Destruction de " . __CLASS__ . "\n";
+  }
 
   public function __set($property, $value) {
         parent::__set($property,$value); //appel du set de Soigneur car Medecin descends de Soigneur
@@ -22,15 +23,23 @@ $estAidé=0;
         parent::__get($property); //appel du get de Soigneur car Medecin descends de Soigneur
     }
 
-  public function SoignerVictimes(){
-    if ($victim->$etat = "Grave" ){
-      //placement sur la carte du médecin vers les victimes grave
-      Guérir();
-       $victim->$pris_en_charge=true;
-    }elseif($victim->$etat = "Léger"){
+  public function setNbAide1()
+  {
+    $this -> estAide  += 1 ;
+  }
+  
+  public function getNbAide()
+  {
+    return $this -> estAide;
+  }
+  
+  public function SoignerVictimes($victim){
+    if ($victim->getEtat() == "Grave" ){
+      $victim->Guérir();
+         
+    }elseif($victim->getEtat() == "Léger"){
       //placement sur la carte du médecin vers les victimes légères
-      Guérir();
-       $victim->$pris_en_charge=true;
+      $victim->Guérir();
     }
   }
 }
