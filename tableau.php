@@ -2,151 +2,68 @@
 <html lang="fr">
   <head>
 	 <?php require("data.php"); ?>
-    <meta charset="utf-8">
-    <title></title>
+	 <link href="../public/css/tableau.css" rel="stylesheet">
+	 <script type="text/script" src="../public/js/drag.js" ></script>
+   <meta charset="utf-8">
+   <title></title>
   </head>
   <body>
-	<table>
-		<thead>
+  	<div class="tableau" id="tableau">
+
+  		<h1>Renfort</h1>
+		<table>
+
 			<tr>
-				<td>Renfort</td>
+				<th>Pompiers</th>
 			</tr>
-		</thead>
-		<tr>
-			<td>
-				<table>
-					<thead>
-						<tr>
-							<td>Pompiers</td>
-						</tr>
-					</thead>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbCamionPompier; $i++)
-						{
-							//echo "<td><img src=\"Icones/camionPompier1.png\" alt=\"Pompier\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbCamionPompier; $i++)
-						{
-							echo "<td><img src=\"Icones/camionPompier2.png\" alt=\"Pompier\" id=\"camionPompier$i\" class=\"camionPompiers\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbPompiers; $i++)
-						{
-							//echo "<td><img src=\"Icones/pompier2.png\" alt=\"Pompier\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbPompiers; $i++)
-						{
-							echo "<td><img src=\"Icones/Calque 1.png\" alt=\"Pompier\" id=\"pompier$i\" class=\"pompiers\"></td>";
-						}
-					?>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
+			<tr>
+				<td id="caseCamionPompier"><img src="../public/icones/camionPompier2.png" alt="Pompier" id="camionPompier"></td>
+			</tr>
+			<tr>
+				<td id="casePompier"><img src="../public/icones/Calque 1.png" alt="Pompier" id="pompier"></td>
+			</tr>
+
+		</table>
+		<table>
+			<tr>
+				<th>Samu</th>
+			</tr>
+			<tr>
+				<td id="caseMedecin"><img src="../public/icones/medecin2.png" alt="medecin" id="medecin"></td>
+			</tr>
+			<tr>
+				<td id="caseInfirmiere"><img src="../public/icones/infirmière1.png" alt="infirmiere" id="infirmiere"></td>
+			</tr>
+			<tr>
+				<td id="caseAmbulance"><img src="../public/icones/camionAmbulance1.png" alt="camionAmbulance1" id="ambulance"></td>
+			</tr>
+
+			</table>
+
 			<table>
-					<thead>
-						<tr>
-							<td>Samu</td>
-						</tr>
-					</thead>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbMedecin; $i++)
-						{
-							//echo "<td><img src=\"Icones/medecin1.png\" alt=\"medecin1\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbMedecin; $i++)
-						{
-							echo "<td><img src=\"Icones/medecin2.png\" alt=\"medecin2\" id=\"medecin$i\" class=\"medecins\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbInfirmiere; $i++)
-						{
-							echo "<td><img src=\"Icones/infirmière1.png\" alt=\"infirmiere\" id=\"infirmiere$i\" class=\"infirmieres\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbAmbulance; $i++)
-						{
-							echo "<td><img src=\"Icones/camionAmbulance1.png\" alt=\"camionAmbulance1\" id=\"ambulance$i\" class=\"ambulances\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbAmbulance; $i++)
-						{
-							//echo "<td><img src=\"Icones/camionAmbulance2.png\" alt=\"camionAmbulance2\"></td>";
-						}
-					?>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<table>
-					<thead>
-						<tr>
-							<td>Policiers</td>
-						</tr>
-					</thead>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbPolier; $i++)
-						{
-							echo "<td><img src=\"Icones/policier1.png\" alt=\"policier1\" id=\"policier$i\" class=\"policiers\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbPolier; $i++)
-						{
-							//echo "<td><img src=\"Icones/policier2.png\" alt=\"policier2\"></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbVoiturePolice; $i++)
-						{
-							echo "<td><img src=\"Icones/voiturePolice1.png\" alt=\"voiturePolicie1\" id=\"voiturePolice$i\" class=\"voiturePolices\" ></td>";
-						}
-					?>
-					</tr>
-					<tr>
-					<?php
-						for ($i =0; $i < $nbVoiturePolice; $i++)
-						{
-							//echo "<td><img src=\"Icones/voiturePolice2.png\" alt=\"voiturePolice2\"></td>";
-						}
-					?>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+			<tr>
+				<th>Policiers</th>
+			</tr>
+
+			<tr>
+				<td id="casePolicier"><img src="../public/icones/policier1.png" alt="policier1" id="policier"></td>
+			</tr>
+			<tr>
+				<td id="caseVoiturePolice"><img src="../public/icones/voiturePolice1.png" alt="voiturePolicie1" id="voiturePolice"></td>
+			</tr>
+
+</table>
+<table>
+			<tr>
+
+				<th>PMA</th>
+			</tr>
+
+			<tr>
+				<td id="casePMA"><img src="../public/icones/pma.png" alt="pma" id="pma"></td>
+			</tr>
+		</table>
+	</div>
+
   </body>
 </html>
