@@ -1,0 +1,103 @@
+/*html{
+
+  height: 100%;
+}
+*/
+body{
+
+  font-size : 1.2em;
+  font-family: cursive;
+
+  background-color: grey;
+  background-image: url("../images/fond_ecran.png");
+
+  height: 100%;
+  width: 100%;
+  margin : 0px;
+
+}
+
+#titreVue{
+  text-align: center;
+}
+
+#morgue {
+  visibility: hidden;
+}
+
+section {
+
+  min-height: 500px;
+  max-height: 800px;
+  height: 80%;
+  width : 100%;
+
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /*margin-bottom: 10%;*/
+}
+
+.menu{
+
+  margin-top: 5%;
+}
+
+.tableau {
+
+  /*Permet d'aligner les tableaux au centre du rectangle*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+
+  width: 90%;
+  min-width: 100px;
+  /*position: relative;*/
+  max-height: 700px;
+  /*height: 75%;*/
+    /*height: 100%;*/
+  /*position: fixed;*/
+  /*scroll-behavior: smooth;*/
+  overflow: auto;
+  scroll-behavior: smooth;
+
+}
+
+.tableau img {
+
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 10px;
+  border : 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 2px black;
+  background-color: rgb(5,64,87);
+  z-index: 2;
+  /*position: absolute;*/
+}
+
+article {
+
+  margin-top : 3%;
+  /*Modifie la taille de l'article (milieu)*/
+  max-height: 800px;
+  height: 100%;
+  width : 50%;
+  min-width: 400px;
+
+}
+
+aside {
+
+	width: 25%;
+  max-width: 300px;
+  min-width: 100px;
+  height: 100%;
+  float: right;
+}

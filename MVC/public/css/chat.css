@@ -1,0 +1,166 @@
+#chat {
+
+	margin-top: 5%;
+	width : 100%;
+	min-width: 200px;
+	max-width: 300px;
+	height: 400px;
+	border : 1.5px solid black;
+	border-radius: 5px;
+	box-shadow:  7px 5px 5px grey;
+	background-color: grey;
+	font-family: arial;
+	/*scroll-behavior: smooth;
+	overflow: scroll;*/
+}
+
+.messages {
+
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 80%;
+}
+
+.button{
+	margin-top: -20px;
+}
+
+.div_messages{
+
+	max-height: 200px;
+	scroll-behavior: smooth;
+	overflow: scroll;
+}
+
+#formulaire {
+	visibility: visible;
+}
+
+form{
+
+	max-width: 300px;
+	min-width: 100px;
+	height: 80%;
+
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-top : 5%;
+	
+	border : 1px solid black;
+	border-radius: 5px;
+	background-color: white;
+
+/*	scroll-behavior: smooth;
+	overflow: scroll;*/
+
+}
+
+textarea{
+
+	width : 90%;
+	min-height: 60px;
+	margin-top: -30px;
+
+	scroll-behavior: smooth;
+	overflow: scroll;
+}
+
+.icone{
+	width : 20px;
+	display : block;
+	float : left;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+
+}
+
+
+.tab img {
+
+	max-width: 40px;
+	max-height: 40px;
+	min-width: 20px;
+	border : 1px solid black;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 3px 2px 2px black;
+	background-color: rgb(5,64,87);
+
+}
+
+.tab {
+
+	background-color: rgba(75,80,90, 0.5);
+	border : 1px solid black;
+	border-radius: 5px;
+	box-shadow: 7px 5px 5px black;
+	border-collapse: collapse;
+
+	max-height: 400px;
+	margin-top : 5%;
+	scroll-behavior: smooth;
+	overflow: scroll;
+
+}
+
+.chef {
+	width : 100%;
+	min-width: 300px;
+
+}
+
+ul li {
+
+	list-style: none;
+	float: left;
+
+	width: 30px;
+	/*margin-bottom: 40px;*/
+
+
+}
+
+
+
+ul {
+	margin-left: -35px;
+	margin-top: 10px;
+
+	/*margin-bottom: 5px;*/
+}
+
+caption {
+	
+	font-weight: bold;
+}
+
+.chef td, .chef tr {
+
+	width : 100%;
+	min-width: 200px;
+	margin : auto;
+	height: 120px;
+}
+
+
+.menuChat {
+
+	margin : auto;
+	width : 100%;
+	min-width: 80px;
+	height: 40px;
+	border : 0.5px solid grey;
+		/*border-radius: 2px;*/
+	background-color: rgba(39,119,138, 0.5); 
+    text-shadow: none;
+}
+
+figcaption{
+	
+	color : white;
+	text-align: center;
+	vertical-align: baseline;
+}
