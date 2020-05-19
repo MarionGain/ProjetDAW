@@ -1,0 +1,37 @@
+footer {
+
+    margin-top: 5%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+
+    padding-top : 10px;
+    padding-left: 30px;
+
+    height: 15%;
+    min-height: 100px;
+    background-color: rgb(5,64,87);
+    color: white;
+    font-size: 0.75em;
+
+}
+
+footer a {
+
+    margin: -20px;
+    margin-top: 20px;
+    padding-top : 10px;
+    padding-left: 30px;
+    background-color: rgb(5,64,87);
+    height: 100px;
+    color: white;
+    font-size: 0.75em;
+}
+
+footer a:visited {
+    color : rgb(39,119,138);
+}
+
+footer a:hover {
+    color : rgb(194,231,209);
+}
