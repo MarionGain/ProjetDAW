@@ -1,0 +1,47 @@
+#pma {
+	z-index: 1;
+}
+
+
+#listePompier{
+	visibility: hidden;
+}
+
+#listePolice{
+	visibility: hidden;
+}
+
+
+#tableau table {
+
+	width: 50%;
+	min-width: 80px;
+	max-width: 90px;
+
+	margin-bottom: 10px;
+
+	background-color: rgba(75,80,90, 0.5);
+	border-radius: 5px;
+	box-shadow: 7px 5px 5px black;
+	border-collapse: collapse;
+
+}
+
+#tableau{
+
+	background-color: rgba(39,119,138, 0.5); 
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 7px 5px 5px grey;
+}
+
+
+#tableau td, #tableau th {
+
+	max-width: 80px;
+	padding: 5px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
