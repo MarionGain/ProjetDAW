@@ -27,7 +27,7 @@
                     session_start();
                     $_SESSION['login'] = $_POST['login'];
                     // require('../view/connexion_reussiteVIEW.php');
-                    require_once('../view/COPG.php');
+                    require_once('../view/copg.php');
                   }
                   else
                   {

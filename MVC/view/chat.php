@@ -25,7 +25,7 @@
 							
 						</tr>
 						<tr>
-							<td><figure><img src=\"../public/icones/chef_pompier.png\"id='chefPompier'/><figcaption>Chef des pompiers</figcaption></figure></td>
+							<td><figure><img src=\"../public/icones/chef_pompier.png\"id='pompier'/><figcaption>Chef des pompiers</figcaption></figure></td>
 							
 						</tr>
 						<tr>

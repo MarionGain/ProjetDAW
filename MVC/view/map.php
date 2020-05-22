@@ -6,9 +6,9 @@
 	<link href="../public/css/map.css" rel="stylesheet">
 	<!-- <script type="text/script" src="draganddrop.js" ></script> -->
 	<script type="text/javascript" src="../public/js/map.js" ></script>
-	<!-- <script type="text/javascript" src="../public/js/demandeRenfort.js" ></script> -->
+	<script type="text/javascript" src="../public/js/demandeRenfort.js" ></script>
 </head>
-<body onload="initMap()">
+<body onload="test()">
 	
 	<button id="demandeRenfort">Demander des renforts</button>
 	<?php

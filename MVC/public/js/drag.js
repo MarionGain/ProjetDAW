@@ -1,5 +1,5 @@
 
-var pompier = document.getElementById('iconePompier');
+var pompier = document.getElementById('pompier');
 var camionPompier = document.getElementById('camionPompier');
 // var medecin = document.getElementById('medecin');
 // var infirmiere = document.getElementById('infirmiere');

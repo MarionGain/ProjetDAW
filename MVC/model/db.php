@@ -5,7 +5,11 @@ function connexion()
 {
   try
     {
+      //Connexion locale 
   	   $connexion = new PDO('mysql:host=localhost;dbname=seriousGame;charset=utf8', 'root', 'root');
+
+      // connexion sur le serveur
+       // $connexion = new PDO('mysql:host=sql200.byethost.com;dbname=b24_25561430_principal;charset=utf8', 'b24_25561430', 'Projetdaw21');
        //echo "<h1>SQL - connexion établie !</h1>";
      }
 

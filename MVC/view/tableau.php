@@ -21,7 +21,7 @@
 				<!-- <select id="listePompier"><option>Evacuer</option></select> -->
 			</tr>
 			<tr>
-				<td><img src="../public/icones/Calque 1.png" alt="Pompier" id="iconePompier"></td>
+				<td><img src="../public/icones/Calque 1.png" alt="Pompier" id="pompier"></td>
 				<td><select id="listePompier"><option>Actions</option><option>Evacuer</option><option>Bla</option></select></td>
 			</tr>
 

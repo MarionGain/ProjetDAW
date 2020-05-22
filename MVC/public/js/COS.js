@@ -1,4 +1,4 @@
-var pompier = document.getElementById("iconePompier");
+var pompier = document.getElementById("pompier");
 var camion = document.getElementById("camionPompier");
 var liste = document.getElementById("listePompier");
 var map = document.getElementById("map");
@@ -6,7 +6,8 @@ var pma = document.getElementById('pma');
 
 function initCOS(){
 	
-	var pompier = document.getElementById("iconePompier");
+	alert("cos");
+	var pompier = document.getElementById("pompier");
 	var camion = document.getElementById("camionPompier");
 	var liste = document.getElementById("listePompier");
 	var map = document.getElementById("map");
@@ -14,6 +15,15 @@ function initCOS(){
 	pompier.addEventListener("mouseover", actionsPompier);
 	liste.addEventListener("change", selection);
 
+}
+
+function Envoie()
+{
+  $.ajax({
+    type: 'get',
+    url: '../controller/dsmController.php',
+  });
+	console.log("Envoie");
 }
 
 function actionsPompier(){
@@ -32,6 +42,7 @@ function actionsPompier(){
 
 
 function selection(){
+
 	var liste = document.getElementById("listePompier");
 	if(liste.options.selectedIndex == 1){
 		evacuer();
@@ -39,12 +50,14 @@ function selection(){
 }
 
 function evacuer(){
+
 	var pma = document.getElementById('pma');
-	var pompier = document.getElementById("iconePompier");
+	var pompier = document.getElementById("pompier");
 	var camion = document.getElementById("camionPompier");
 	var liste = document.getElementById("listePompier");
 	var map = document.getElementById("map");
 	var bus = document.getElementById('bus');
+	
 	if(getComputedStyle(pma).position == "absolute"){
 		pompier.style.position="absolute";
 		onMapStyle(pompier);
@@ -55,13 +68,18 @@ function evacuer(){
 		camion.style.left = getComputedStyle(bus).left;
 		camion.style.top = getComputedStyle(bus).top;
 		setTimeout(function() {pompier.style.left = getComputedStyle(pma).left; pompier.style.top = getComputedStyle(pma).top;camion.style.left = getComputedStyle(pma).left; camion.style.top = getComputedStyle(pma).top;}, 3000)
+		Envoie();
 		setTimeout(function() {offMapStyle(pompier); offMapStyle(camion);pompier.style.position ='inherit'; camion.style.position ='inherit';}, 6000)
 	}
 	
+	else {
+		alert("Le pompier ne peut pas évacuer les victimes car le PMA n'est pas encore placé sur la map");
+	}
 }
 
 
 function onMapStyle(icone){
+
 	// icone.style.width = "20px";
 	icone.style.border="none";
 	icone.style.padding="0px"; 
@@ -69,6 +87,7 @@ function onMapStyle(icone){
 }
 
 function offMapStyle(icone){
+	
 	icone.style.border="inherit";
 	icone.style.padding="10px"; 
 	icone.style.backgroundColor="rgb(5,64,87)"; 

@@ -12,7 +12,7 @@
         function affiche_menu()
         {
             //Tableaux contenant des liens originaux et du texte original à afficher
-            $tab_lien = array( "/MVC/view/COPG.php", "/MVC/view/COS.php", "/MVC/view/CRRA.php","/MVC/view/DSM.php", "/MVC/view/trieur.php", "/MVC/view/EVAC.php") ;
+            $tab_lien = array( "../view/copg.php", "../view/cos.php", "../view/crra.php","../view/dsm.php", "../view/trieur.php", "../view/evac.php") ;
             $tab_texte = array( "COPG", "COS", "CRRA", "DSM", "Trieur", "EVAC");
 
             //Informations sur la page actuelle

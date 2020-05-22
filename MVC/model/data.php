@@ -4,6 +4,15 @@
 	$nbAmbulance = 3;
 	$nbMedecin = 4;
 	$nbInfirmiere = 8;
-	$nbPolier = 3;
+	$nbPolicier = 3;
 	$nbVoiturePolice = 2;
+	$nbVictimes = 15;
+
+	setcookie("pompier",$nbPompiers);
+	setcookie("camionPompier",$nbCamionPompier);
+	setcookie("ambulance",$nbAmbulance);
+	setcookie("medecin",$nbMedecin);
+	setcookie("infirmiere",$nbInfirmiere);
+	setcookie("policier",$nbPolicier);
+	setcookie("voiturePolice",$nbVoiturePolice);
 ?>

@@ -1,11 +1,11 @@
 function start(){
-	var brancard1 = document.getElementById("brancard1");
-	var brancard2 = document.getElementById("brancard2");
+	var brancardDroite = document.getElementById("brancardDroite");
+	var brancardGauche = document.getElementById("brancardGauche");
 
-	brancard1.addEventListener("click", function(e) {
+	brancardDroite.addEventListener("click", function(e) {
 		changeImage(e);
 	});
-	brancard2.addEventListener("click", function(e) {
+	brancardGauche.addEventListener("click", function(e) {
 		changeImage(e);
 	});
 }
@@ -16,18 +16,33 @@ function changeImage(e){
 }
 
 function vueTrieur(e){
-	
+	document.cookie = "Brancard="+e.currentTarget.id;
 	var top;
 	var left;
-	if(e.currentTarget.id == "brancard1"){
+	if(e.currentTarget.id == "brancardDroite"){
 		top=(screen.height)/2;
 		left=(screen.width)-1200;
 	}
 	else {
-
 		top=(screen.height)/2;
 		left=(screen.width)-400;
 	}
 
-	window.open("/MVC/view/patient.php", "patient", "titlebar=yes, resizable=yes, width=300, height=300, top="+top+",left="+left);
+ 	window.open("../view/Patient.php", "patient", "titlebar=yes, resizable=yes, width=300, height=300, top="+top+",left="+left);
+}
+
+function startP()
+{
+	var bouton = document.getElementById("bouton");
+	bouton.addEventListener("click", function() {
+		//closeWin();
+	});
+}
+
+function closeWin() {
+	setTimeout(function(){ self.close(); }, 3000);
+}
+
+function Actualiser() {
+	window.location.reload();
 }

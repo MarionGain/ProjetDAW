@@ -2,7 +2,7 @@ function initChat(){
 
 var fermer = document.getElementById("fermer");
 var reduire = document.getElementById("reduire");
-var pompier = document.getElementById("chefPompier");
+var pompier = document.getElementById("pompier");
 
 var COPG = document.getElementById("COPG");
 var DSM = document.getElementById("DSM");

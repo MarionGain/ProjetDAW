@@ -1,7 +1,7 @@
 <?php
-if(!isset($_SESSION)){
-    session_start();
-}
+  if(!isset($_SESSION)){
+      session_start();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -11,34 +11,35 @@ if(!isset($_SESSION)){
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type='text/javascript' src='../public/js/chat.js'></script>
     <?php if($_SESSION['login'] != 'Gamemaster')
-          echo "<script type='text/javascript' src='../public/js/COPG.js'></script>";
+          echo "<script type='text/javascript' src='../public/js/copg.js'></script>";
     ?>
     <meta charset="utf-8">
     <title>COPG</title>
+    <?php $load="onload='initMap(); initChat();'"; 
+          if($_SESSION['login'] != 'Gamemaster') { 
+            $load .="'initCOPG();'";
+          }
+    ?>
   </head>
 
-  <body <?php if($_SESSION['login'] != 'Gamemaster') {
-                echo "onload='initCOPG(); initMap();'";
-          }
-        ?>
-  >
+  <body  <?php echo $load;?> >
     <div class="page">
 
     <header>
-      <?php require("header.php"); ?>
+      <?php require_once("../controller/initController.php");
+      require_once("header.php"); ?>
     </header>
 
     <div class="menu">
-
-
       <?php 
-      if ($_SESSION['login'] == 'Gamemaster'){
-        require("menu.php"); $menu=affiche_menu(); echo $menu; 
-      }
-      else {
-        echo "<h1 id='titreVue'>Bienvenue sur la vue du COPG</h1>";
-      }
+        if ($_SESSION['login'] == 'Gamemaster'){
+          require_once("menu.php"); $menu=affiche_menu(); echo $menu; 
+        }
+        else {
+          echo "<h1 id='titreVue'>Bienvenue sur la vue du COPG</h1>";
+        }
       ?>
     </div>
 
@@ -46,7 +47,7 @@ if(!isset($_SESSION)){
 
       <aside class="tableau">
         <?php
-          require("tableau.php");
+          require_once("tableau.php");
         ?>
         <img src="../public/icones/morgue.png" id="morgue"/>
       </aside>
@@ -54,14 +55,14 @@ if(!isset($_SESSION)){
       <article>
         
         <?php 
-          require("map.php");
+          require_once("map.php");
           echo $map;
         ?>
       </article>
 
       <aside>
         <?php
-          require("chat.php");
+          require_once("chat.php");
           echo $tableau;
           echo $chat;
         ?>
@@ -70,14 +71,15 @@ if(!isset($_SESSION)){
     </section>
 
     <footer>
-      <?php require("footer.php"); ?>
+      <?php require_once("footer.php"); ?>
     </footer>
   </div>
   </body>
+  <!-- <script type='text/javascript' src='../public/js/drag.js'></script> -->
   <?php
       if ($_SESSION['login'] != 'Gamemaster'){
        echo  "<script type='text/javascript' src='../public/js/drag.js'></script>";
       }
-      ?>
+  ?>
  
 </html>

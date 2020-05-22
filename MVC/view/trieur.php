@@ -5,19 +5,21 @@
     <meta charset="utf-8">
     <title>Page</title>
     <script type="text/javascript" src="../public/js/trieur.js"></script>
+    <?php require_once("../controller/trieurController.php"); ?>
   </head>
 
   <body onload="start()">
+
     <div class="page">
 
     <!-- En-tête -->
     <header>
-      <?php require("header.php"); ?>
+      <?php require_once("header.php"); ?>
     </header>
 
     <div class="menu">
 
-      <?php require("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
     </div>
 
     <section id="section">
@@ -28,8 +30,8 @@
       </aside>
 
       <article>
-        <img src="../public/images/brancard.png" alt="brancard" id="brancard1"/>
-        <img src="../public/images/brancard.png" alt="brancard" id="brancard2"/>
+        <img src="../public/images/brancard.png" alt="brancard" id="brancardDroite"/>
+        <img src="../public/images/brancard.png" alt="brancard" id="brancardGauche"/>
       </article>
 
       <aside>
@@ -43,7 +45,7 @@
     </section>
 
     <footer>
-      <?php require("footer.php"); ?>
+      <?php require_once("footer.php"); ?>
     </footer>
   </div>
   </body>

@@ -2,24 +2,28 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+
+    <script type="text/javascript" src="../public/js/trieur.js"></script>
+    <?php require_once("../controller/trieurController.php"); ?>
+    <?php AjouteVictime(); ?>
+    <title>Patient</title>
   </head>
 
-  <body>
+  <body onload="startP()">
     <h1>Description du patient</h1>
     <div class="description">
       <p>
-        Blabla symptomes patient
+        <?php AfficheVictime(); ?>
       </p>
-      <form action="" method="post">
-        <select id="listeEtats">
+      <form action="../controller/trieurController.php" method="post">
+        <select id="listeEtats" name="Etat">
           <option>État du patient</option>
-          <option name="grave">Grave</option>
-          <option name="leger">Léger</option>
-          <option name="psy">Psychologique</option>
-          <option name="mort">Mort</option>
+          <option value="grave">Grave</option>
+          <option value="leger">Léger</option>
+          <option value="psy">Psychologique</option>
+          <option value="mort">Mort</option>
         </select>
-        <p>
+        <p id="bouton">
         <input type="submit" name="valider" value="Envoyer au PMA">
       </p>
       </form>

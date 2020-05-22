@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-	 <?php require("data.php"); ?>
+	 <?php require("../model/data.php"); ?>
 	 <link href="../public/css/tableau.css" rel="stylesheet">
 	 <script type="text/script" src="../public/js/draganddrop.js" ></script>
    <meta charset="utf-8">

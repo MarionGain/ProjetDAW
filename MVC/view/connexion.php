@@ -13,7 +13,7 @@
 
 		<h1> Bienvenue sur le serious game ! </h1>
 
-		<form method="post" action="../controller/connecter.php" onsubmit="return verifie_champs_connexion()">
+		<form method="post"  action='../controller/connecter.php' onsubmit="return verifie_champs_connexion()">
 
 			<p>
 				<label for="login">Nom d'utilisateur : </label></br>
@@ -28,7 +28,7 @@
 			  <p id="MessageErreurPassword" class="MessageErreur"> <br/></p>
 			<p class="boutons">
 				<input type="submit" name="connexion" value="Se connecter" class="button">
-				<a href="./Inscription.php"><input type="button" name="inscription" value="S'inscrire" class="button"></a>
+				<a href="./inscription.php"><input type="button" name="inscription" value="S'inscrire" class="button"></a>
 			</p>
 		</form>
 	

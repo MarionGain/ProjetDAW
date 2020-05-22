@@ -3,22 +3,25 @@
   <head>
     <link href="../public/css/vues.css" rel="stylesheet">
     <meta charset="utf-8">
-    <script type="text/javascript" src="../public/js/DSM.js" ></script>
-    <script type="text/javascript" src="../public/js/vue.js" ></script>
+    <script type="text/javascript" src="../public/js/map.js" ></script>
+    <script type="text/javascript" src="../public/js/chat.js" ></script>
     <title>Page</title>
+       <?php $load="onload='initMap(); initChat(); test(); start();'"; 
+        
+    ?>
   </head>
 
-  <body onload="initDSM(); initMap();">
+  <body <?php echo $load; ?> >
     <div class="page">
 
     <!-- En-tête -->
     <header>
-      <?php require("header.php"); ?>
+      <?php require_once("header.php"); ?>
     </header>
 
     <div class="menu">
 
-      <?php require("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
     </div>
 
     <section id="section">
@@ -47,7 +50,7 @@
     </section>
 
     <footer>
-      <?php require("footer.php"); ?>
+      <?php require_once("footer.php"); ?>
     </footer>
   </div>
   </body>
