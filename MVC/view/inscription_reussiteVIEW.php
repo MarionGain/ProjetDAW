@@ -7,7 +7,7 @@ s<!DOCTYPE html>
   </head>
   <body>
       <header>
-       <?php require_once('.:header.php');?>
+       <?php require_once('header.php');?>
       </header>
 
       <h1>Inscription réussite !</h1>
@@ -16,7 +16,7 @@ s<!DOCTYPE html>
       <button type="button" name="Inscrire" class="centre" onclick="window.location.href = './log.php?action=connexion';" >Connexion</button>
        </section>
       <footer id="footer">
-        <?php  require_once('./footer.php');?>
+        <?php  require_once('footer.php');?>
       </footer>
   </body>
 </html>

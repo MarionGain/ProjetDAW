@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-       <?php require_once('./header.php');?>
+       <?php require_once('header.php');?>
     </header>
     <h1>Echec de l'inscription, votre login est déja existant ou l'email renseigné est déja utilisée</h1>
     
@@ -18,7 +18,7 @@
     </div>
   </section>
     <footer id="footer">
-      <?php  require_once('./footer.php');?>
+      <?php  require_once('footer.php');?>
     </footer>
   </body>
 </html>
