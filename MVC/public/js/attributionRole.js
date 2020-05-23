@@ -1,4 +1,12 @@
+var COPGSet=false;
+var DSMset=false;
+var CRRAset=false;
+var Trieurset=false;
+var Evacset=false;
+var Cosset=false;
+
 function onload(){
+  checkPlayers();
   let button = document.getElementById('bCOPG');
   button.onclick = COPG;
   button = document.getElementById('bDSM');
@@ -16,11 +24,10 @@ function onload(){
   button = document.getElementById('Reset');
   button.onclick = reset;
   setInterval(checkPlayers, 5000);
-  checkPlayers();
+
 }
 
 function checkPlayerExiste(name){
-
   let connectes= document.getElementById("JoueursCo").innerHTML;
   let tabConnectes = connectes.split('-');
   let existe = false;
@@ -78,18 +85,18 @@ function checkPlayerUsed(name, cas){
       rez = false;
       break;
     }
-    console.log(rez);
     return rez;
 }
 
-function ajaxCall(ps,ro){
+function ajaxCallCOPG(ps,ro){
   $.ajax({
-       url : '../view/attribuerRole.php',
+       url : '../../view/AttribuerRole.php',
        type : 'GET', // Le type de la requête HTTP, ici devenu POST
        data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
        dataType : 'text',
        success : function(text){ // code_html contient le HTML renvoyé
          document.getElementById('errorCOPG').innerHTML = text;
+         COPGSet=true;
        }
     });
 }
@@ -99,7 +106,7 @@ function COPG(){
   let name = document.getElementById('pseudoCOPG').value;
   if(checkPlayerExiste(name)){
     if(checkPlayerUsed(name,1)){
-      ajaxCall(name,'COPG');
+      ajaxCallCOPG(name,'COPG');
     }
     else {
       document.getElementById('errorCOPG').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -114,7 +121,7 @@ function DSM(){
   let name = document.getElementById('pseudoDSM').value;
   if(checkPlayerExiste(name)){
     if(checkPlayerUsed(name,2)){
-      ajaxCall(name,'DSM');
+      ajaxCallDSM(name,'DSM');
     }
     else {
       document.getElementById('errorDSM').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -123,15 +130,26 @@ function DSM(){
   else {
     document.getElementById('errorDSM').innerHTML = "Ce joueur n'est pas connecté ! ";
   }
-  // console.log("DSM");
+}
+
+function ajaxCallDSM(ps,ro){
+  $.ajax({
+       url : '../../view/AttribuerRole.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+       dataType : 'text',
+       success : function(text){ // code_html contient le HTML renvoyé
+         document.getElementById('errorDSM').innerHTML = text;
+         DSMset=true;
+       }
+    });
 }
 
 function CRRA(){
-
   let name = document.getElementById('pseudoCRRA').value;
   if(checkPlayerExiste(name)){
-    if(checkPlayerUsed(name,1)){
-      ajaxCall(name,'CRRA');
+    if(checkPlayerUsed(name,3)){
+      ajaxCallCRRA(name,'CRRA');
     }
     else {
       document.getElementById('errorCRRA').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -140,16 +158,26 @@ function CRRA(){
   else {
     document.getElementById('errorCRRA').innerHTML = "Ce joueur n'est pas connecté ! ";
   }
+}
 
-  console.log("CRRA");
+function ajaxCallCRRA(ps,ro){
+  $.ajax({
+       url : '../../view/AttribuerRole.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+       dataType : 'text',
+       success : function(text){ // code_html contient le HTML renvoyé
+         document.getElementById('errorCRRA').innerHTML = text;
+         CRRAset=true;
+       }
+    });
 }
 
 function Trieur(){
-
   let name = document.getElementById('pseudoTrieur').value;
   if(checkPlayerExiste(name)){
-    if(checkPlayerUsed(name,1)){
-      ajaxCall(name,'Trieur');
+    if(checkPlayerUsed(name,4)){
+      ajaxCallTrieur(name,'Trieur');
     }
     else {
       document.getElementById('errorTrieur').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -158,16 +186,25 @@ function Trieur(){
   else {
     document.getElementById('errorTrieur').innerHTML = "Ce joueur n'est pas connecté ! ";
   }
-  // console.log("DSM");
-  console.log("Trieur");
+}
+function ajaxCallTrieur(ps,ro){
+  $.ajax({
+       url : '../../view/AttribuerRole.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+       dataType : 'text',
+       success : function(text){ // code_html contient le HTML renvoyé
+         document.getElementById('errorTrieur').innerHTML = text;
+         Trieurset=true;
+       }
+    });
 }
 
 function Evac(){
-
   let name = document.getElementById('pseudoEvac').value;
   if(checkPlayerExiste(name)){
-    if(checkPlayerUsed(name,1)){
-      ajaxCall(name,'Evac');
+    if(checkPlayerUsed(name,5)){
+      ajaxCallEvac(name,'Evac');
     }
     else {
       document.getElementById('errorEvac').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -176,16 +213,24 @@ function Evac(){
   else {
     document.getElementById('errorEvac').innerHTML = "Ce joueur n'est pas connecté ! ";
   }
-  // console.log("DSM");
-  console.log("Evac");
 }
-
+function ajaxCallEvac(ps,ro){
+  $.ajax({
+       url : '../../view/AttribuerRole.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+       dataType : 'text',
+       success : function(text){ // code_html contient le HTML renvoyé
+         document.getElementById('errorEvac').innerHTML = text;
+         Evacset=true;
+       }
+    });
+}
 function COS(){
-
   let name = document.getElementById('pseudoCOS').value;
   if(checkPlayerExiste(name)){
-    if(checkPlayerUsed(name,1)){
-      ajaxCall(name,'COS');
+    if(checkPlayerUsed(name,6)){
+      ajaxCallCos(name,'COS');
     }
     else {
       document.getElementById('errorCOS').innerHTML = "Ce joueur est déjà attribué à un autre rôle ! ";
@@ -194,26 +239,70 @@ function COS(){
   else {
     document.getElementById('errorCOS').innerHTML = "Ce joueur n'est pas connecté ! ";
   }
-  // console.log("DSM");
-  console.log("COS");
+}
+
+function ajaxCallCos(ps,ro){
+  $.ajax({
+       url : '../../view/AttribuerRole.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       data : 'pseudo=' + ps + '&role=' + ro, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+       dataType : 'text',
+       success : function(text){ // code_html contient le HTML renvoyé
+         document.getElementById('errorCOS').innerHTML = text;
+         Cosset=true;
+       }
+    });
 }
 
 function launch(){
-  console.log("launch");
+  if(Cosset && Trieurset && Evacset && COPGSet && DSMset && CRRAset){
+    $.ajax({
+         url : '../../view/LaunchGame.php',
+         type : 'GET', // Le type de la requête HTTP, ici devenu POST
+         dataType : 'text',
+      });
+      document.location.href="../view/scenario.php";
+  }
+  else {
+    document.getElementById("errorLaunch").innerHTML = "Tous les rôles n'ont pas été attribués !";
+  }
 }
 
 function reset(){
-  console.log("reset");
+  $.ajax({
+       url : '../../view/ResetRoles.php',
+       type : 'GET', // Le type de la requête HTTP, ici devenu POST
+       dataType : 'text',
+    });
+  document.getElementById('pseudoCOPG').innerHTML = "";
+  document.getElementById('pseudoDSM').innerHTML = "";
+  document.getElementById('pseudoCRRA').innerHTML = "";
+  document.getElementById('pseudoTrieur').innerHTML = "";
+  document.getElementById('pseudoEvac').innerHTML = "";
+  document.getElementById('pseudoCOS').innerHTML = "";
+  document.getElementById('errorCOS').innerHTML = "";
+  document.getElementById('errorTrieur').innerHTML = "";
+  document.getElementById('errorCRRA').innerHTML = "";
+  document.getElementById('errorDSM').innerHTML = "";
+  document.getElementById('errorEvac').innerHTML = "";
+  document.getElementById('errorCOPG').innerHTML = "";
+  Cosset = false;
+  Trieurset=false;
+  Evacset=false;
+  DSMset=false;
+  CRRAset=false;
+  COPGSet=false;
+
 }
 
 function checkPlayers(){
   $.ajax({
     type: 'GET',
-    url: '../view/GetJoueursConnectes.php',
+    url: '../../view/GetJoueursConnectes.php',
     success: function(data) {
         document.getElementById("JoueursCo").innerHTML=data;
      },
     error: function() {
-      check(); }
+      checkPlayers  (); }
   });
 }

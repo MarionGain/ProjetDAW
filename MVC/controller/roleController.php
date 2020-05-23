@@ -1,3 +1,5 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script  type="text/javascript" src="../public/js/launchGame.js"></script>
 <?php
 
   if(!isset($_SESSION)){
@@ -13,5 +15,4 @@
   setcookie("login",$_SESSION['login']);
 
   require_once("../view/scenario.php");
-
 ?>

@@ -5,7 +5,7 @@ function connexion()
 {
   try
     {
-      //Connexion locale 
+      //Connexion locale
   	   $connexion = new PDO('mysql:host=localhost;dbname=seriousGame;charset=utf8', 'root', 'root');
 
       // connexion sur le serveur
@@ -91,4 +91,25 @@ function insert_role($login, $role){
   $stmt= $connexion->prepare($req);
   $stmt->execute( [ $login, $role] );
 }
+function del_role($role){
+    $connexion = connexion();
+    $req = "DELETE FROM ROLE WHERE role = ?";
+    $stmt= $connexion->prepare($req);
+    $stmt->execute([$role]);
+}
+
+function del_roles(){
+    $connexion = connexion();
+    $req = "DELETE FROM ROLE";
+    $stmt= $connexion->prepare($req);
+    $stmt->execute();
+}
+
+function launch_game(){
+  $connexion = connexion();
+  $req = "UPDATE GAME SET ENCOURS = 'TRUE' WHERE ID = 1";
+  $stmt= $connexion->prepare($req);
+  $stmt->execute();
+}
+
  ?>
