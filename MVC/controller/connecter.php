@@ -26,9 +26,17 @@
                     
                     session_start();
                     $_SESSION['login'] = $_POST['login'];
+
+                    if($login == "Gamemaster"){
+                      require_once('../view/attributionRole.php');
+                    }
+
+                    else {
+                      require_once('../view/attenteJoueur.php');
+                    }
                     // require('../view/connexion_reussiteVIEW.php');
                     require_once('initController.php');
-                    require_once('../view/dsm.php');
+                    
                   }
                   else
                   {

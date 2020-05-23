@@ -1,8 +1,18 @@
+<?php
+  if(!isset($_SESSION)){
+      session_start();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link href="../public/css/scenario.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script  type="text/javascript" src="../public/js/scenario.js"></script>
         <title>Scénario</title>
     </head>
 
@@ -11,7 +21,7 @@
             <?php require_once("header.php");?>
         </header>
 
-        <h1 id="titre" >Page de scénario</h1>
+        <h1 id="titre">Page de scénario</h1>
         
         <section>
             <aside>
@@ -26,7 +36,7 @@
                     dont de nombreux blessés graves, incarcérés, pas de notion d’incendie, pas d’enfants.</p>
                 </div>
                 <div class="bouton"> 
-                    <button type="button" name="Suivant">Rejoindre la partie</button>
+                    <button type="button" name="Suivant" onclick="choixPage()">Rejoindre la partie</button>
                 </div>
             </article>
 

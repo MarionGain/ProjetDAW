@@ -1,0 +1,43 @@
+/*html{
+
+  height: 100%;
+}
+*/
+body{
+
+  font-size : 1.2em;
+  font-family: cursive;
+
+  background-color: grey;
+  background-image: url("../images/fond_ecran.png");
+
+  height: 100%;
+  width: 100%;
+  margin : 0px;
+
+}
+
+section{
+
+  text-align: center;
+}
+
+table, td, tr, th {
+  
+  text-align: center;
+  margin : auto;
+  border :1px solid black;
+  border-radius: 5px;
+    
+  border-collapse: collapse;
+
+}
+
+table {
+
+  background-color: rgba(75,80,90, 0.5);
+  width: 400px;
+  margin: auto;
+  box-shadow: 7px 5px 5px black;
+
+}
