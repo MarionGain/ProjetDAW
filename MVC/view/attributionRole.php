@@ -66,8 +66,8 @@
         <button id="bCos">Envoyer COS</button>
       </div>
       <br>
-      <input type="submit" id="LaunchGame" value="Lancer la partie"></input>
-      
+      <input type="submit" id="LancerPartie" value="Lancer la partie"></input>
+
       <input type="reset" id="Reset" value="Réinitialiser"></input>
     </form>
   </section>

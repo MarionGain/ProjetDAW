@@ -254,19 +254,7 @@ function ajaxCallCos(ps,ro){
     });
 }
 
-function launch(){
-  if(Cosset && Trieurset && Evacset && COPGSet && DSMset && CRRAset){
-    $.ajax({
-         url : '../../view/LaunchGame.php',
-         type : 'GET', // Le type de la requête HTTP, ici devenu POST
-         dataType : 'text',
-      });
-      document.location.href="../view/scenario.php";
-  }
-  else {
-    document.getElementById("errorLaunch").innerHTML = "Tous les rôles n'ont pas été attribués !";
-  }
-}
+
 
 function reset(){
   $.ajax({
