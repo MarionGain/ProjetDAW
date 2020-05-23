@@ -17,14 +17,17 @@
     ?>
     <meta charset="utf-8">
     <title>COPG</title>
-    <?php $load="onload='initMap(); initChat();'"; 
+    <?php $load="onload='initMap(); initChat();"; 
           if($_SESSION['login'] != 'Gamemaster') { 
-            $load .="'initCOPG();'";
+            $load .= "initCOPG();'";
+          }
+          else{
+            $load .= "'";
           }
     ?>
   </head>
 
-  <body  <?php echo $load;?> >
+  <body  <?php echo $load; ?> >
     <div class="page">
 
     <header>

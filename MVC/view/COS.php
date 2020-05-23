@@ -17,11 +17,13 @@
     ?>
     <meta charset="utf-8">
     <title>COS</title>
-    <?php $load="onload='initMap(); initChat();'"; 
+    <?php $load="onload='initMap(); initChat();"; 
           if($_SESSION['login'] != 'Gamemaster') { 
-            $load.="'initCOS();'";
+            $load.="initCOS();'";
           }
-          echo $_SESSION['login'];
+          else{
+            $load .= "'";
+          }
     ?>
   </head>
 

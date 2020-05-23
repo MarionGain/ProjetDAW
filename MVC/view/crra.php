@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     <link href="../public/css/crra.css" rel="stylesheet">
-    <script src="../public/js/crra.js"></script>
+    <script type='text/javascript' src="../public/js/crra.js"></script>
      <script type='text/javascript' src='../public/js/chat.js'></script>
     <?php $load="onload='initChat(); start();'"; 
     ?>
@@ -19,7 +19,14 @@
   <body <?php echo $load; ?> >
     <div class="menu">
 
-      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+      <?php 
+        if ($_SESSION['login'] == 'Gamemaster'){
+            require_once("menu.php"); $menu=affiche_menu(); echo $menu; 
+          }
+        else{
+          echo "<h1 id='titreVue'>Bienvenue sur la vue du CRRA</h1>";
+        }
+      ?>
     </div>
 
     <section> 

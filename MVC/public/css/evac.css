@@ -61,6 +61,10 @@ aside {
 	margin-top: 15%;
 }
 
+#titreVue{
+  text-align: center;
+}
+
 table {
 	
 	border-radius: 5px;

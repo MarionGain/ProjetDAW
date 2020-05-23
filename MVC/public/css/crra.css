@@ -12,6 +12,10 @@ body{
 
 }
 
+#titreVue{
+  text-align: center;
+}
+
 section {
 	 /*background-color: rgb(5,64,87);*/
 

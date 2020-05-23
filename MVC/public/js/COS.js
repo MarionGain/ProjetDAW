@@ -6,7 +6,6 @@ var pma = document.getElementById('pma');
 
 function initCOS(){
 	
-	alert("cos");
 	var pompier = document.getElementById("pompier");
 	var camion = document.getElementById("camionPompier");
 	var liste = document.getElementById("listePompier");

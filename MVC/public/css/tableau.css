@@ -5,7 +5,15 @@
 
 #listePompier{
 	visibility: hidden;
+
 }
+
+select{
+	
+	font-size: xx-small;
+	max-width: 80px;
+}
+
 
 #listePolice{
 	visibility: hidden;

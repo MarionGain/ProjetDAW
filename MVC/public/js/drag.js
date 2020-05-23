@@ -36,7 +36,7 @@ function dragstart(icone){
 
 
 function placerMorgue(){
-	// var morgue = document.getElementById('morgue');
+
 	if(pma.style.left != "0px"){
 		onMapStyle(morgue);
 		morgue.style.width = "30px";

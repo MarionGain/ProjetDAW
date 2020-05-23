@@ -8,7 +8,7 @@ function vuePMA(){
 
 	var top=(screen.height-1000)/2;
 	var left=(screen.width-1000)/2;
-	window.open("/MVC/view/PMA.php", "PMA", "titlebar=yes, resizable=yes, width=1000, height=1000, top="+top+",left="+left);
+	window.open("../view/PMA.php", "PMA", "titlebar=yes, resizable=yes, width=1000, height=1000, top="+top+",left="+left);
 }
 
 

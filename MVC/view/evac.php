@@ -17,8 +17,14 @@
 
   <body <?php echo $load ?>>
     <div class="menu">
-
-      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+      <?php 
+        if ($_SESSION['login'] == 'Gamemaster'){
+            require_once("menu.php"); $menu=affiche_menu(); echo $menu; 
+          }
+        else{
+          echo "<h1 id='titreVue'>Bienvenue sur la vue du Evac</h1>";
+        }
+      ?>
     </div>
 
   <section>

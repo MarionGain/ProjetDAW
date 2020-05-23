@@ -11,7 +11,7 @@ function start(){
 }
 
 function changeImage(e){
-	e.currentTarget.src="../public/images/patientBrancard.png";
+	e.currentTarget.src="../public/icones/patientBrancard.png";
 	vueTrieur(e);
 }
 

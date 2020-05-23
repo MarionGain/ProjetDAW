@@ -19,12 +19,12 @@ function changeBrancardGrave()
   for (var i=0;i<nbVictimeGrave;i++)
   {
     if(i>8){break;}
-    BrancardGrave[i].src = "../public/images/patientBrancard.png";
+    BrancardGrave[i].src = "../public/icones/patientBrancard.png";
   }
   for (var i=0;i<nbVictimeLeger;i++)
   {
     if(i>8){break;}
-    BrancardLeger[i].src = "../public/images/patientBrancard.png";
+    BrancardLeger[i].src = "../public/icones/patientBrancard.png";
   }
 }
 
@@ -40,7 +40,7 @@ function readCookie(name) {
 }
 
 
-function test()
+function soigne()
 {
   $.ajax({
     type: 'get',
@@ -56,7 +56,6 @@ function DegradEtat()
 		type: 'get',
 		url: '../controller/pmaController.php'
 	});
-	console.log("je suis là");
   setTimeout(actualiser,1000);
 }
 

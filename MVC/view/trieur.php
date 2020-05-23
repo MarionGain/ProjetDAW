@@ -18,8 +18,14 @@
     </header>
 
     <div class="menu">
-
-      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
+      <?php 
+        if ($_SESSION['login'] == 'Gamemaster'){
+            require_once("menu.php"); $menu=affiche_menu(); echo $menu; 
+          }
+        else{
+          echo "<h1 id='titreVue'>Bienvenue sur la vue du Trieur</h1>";
+        }
+      ?>
     </div>
 
     <section id="section">
@@ -30,8 +36,8 @@
       </aside>
 
       <article>
-        <img src="../public/images/brancard.png" alt="brancard" id="brancardDroite"/>
-        <img src="../public/images/brancard.png" alt="brancard" id="brancardGauche"/>
+        <img src="../public/icones/brancard.png" alt="brancard" id="brancardDroite"/>
+        <img src="../public/icones/brancard.png" alt="brancard" id="brancardGauche"/>
       </article>
 
       <aside>

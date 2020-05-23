@@ -13,10 +13,6 @@
 
   <body onload="start()">
 
-    <div class="menu">
-
-      <?php require_once("menu.php"); $menu=affiche_menu(); echo $menu; ?>
-    </div>
     <div class="page">
     <section id="section">
       <h1>PMA</h1>
@@ -25,14 +21,14 @@
           <p>
             <table>
               <tr>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave1"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave2"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave3"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave4"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave5"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave6"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave7"class="patientgrave"/></td>
-                <td><img src="../public/images/brancard.png" alt="patient" id="patientgrave8"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave1"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave2"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave3"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave4"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave5"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave6"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave7"class="patientgrave"/></td>
+                <td><img src="../public/icones/brancard.png" alt="patient" id="patientgrave8"class="patientgrave"/></td>
               </tr>
             </table>
           </p>
@@ -43,14 +39,14 @@
             <p>
              <table>
                 <tr>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger1"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger2"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger3"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger4"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger5"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger6"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger7"class="patientleger"/></td>
-                  <td><img src="../public/images/brancard.png" alt="patient" id="patientleger8"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger1"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger2"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger3"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger4"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger5"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger6"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger7"class="patientleger"/></td>
+                  <td><img src="../public/icones/brancard.png" alt="patient" id="patientleger8"class="patientleger"/></td>
                 </tr>
               </table>
             </p>

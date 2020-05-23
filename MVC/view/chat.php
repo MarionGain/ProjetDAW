@@ -29,15 +29,20 @@
 							
 						</tr>
 						<tr>
-							<td id='DSM'><figure><img src=\"../public/icones/DSM2.png\"id='DSM'/><figcaption>DSM</figcaption></figure></td>
+							<td id='CRRA'><figure><img src=\"../public/icones/CRRA.png\"id='CRRA'/><figcaption>CRRA</figcaption></figure></td>
+							
+						</tr>
+
+						<tr>
+							<td id='DSM'><figure><img src=\"../public/icones/DSM.png\"id='DSM'/><figcaption>DSM</figcaption></figure></td>
 							
 						</tr>
 						<tr>
-							<td id='EVAC'><figure><img src=\"../public/icones/DSM3.png\"id='EVAC'/><figcaption>EVAC</figcaption></figure></td>
+							<td id='EVAC'><figure><img src=\"../public/icones/EVAC.png\"id='EVAC'/><figcaption>EVAC</figcaption></figure></td>
 							
 						</tr>
 						<tr>
-							<td id='Trieur'><figure><img src=\"../public/icones/DSM4.png\"id='trieur'/><figcaption>Trieur</figcaption></figure></td>
+							<td id='Trieur'><figure><img src=\"../public/icones/trieur.png\"id='trieur'/><figcaption>Trieur</figcaption></figure></td>
 							
 						</tr>
 

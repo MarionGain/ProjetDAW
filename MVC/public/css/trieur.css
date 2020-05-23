@@ -17,6 +17,10 @@ body{
 
 }
 
+#titreVue{
+  text-align: center;
+}
+
 section {
 
   min-height: 500px;
